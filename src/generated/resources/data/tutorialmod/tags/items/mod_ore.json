@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "tutorialmod:mod_ore_overworld",
+    "tutorialmod:mod_ore_ingot"
+  ]
+}

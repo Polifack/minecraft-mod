@@ -15,6 +15,8 @@ public class ModLanguageProvider extends LanguageProvider {
     protected void addTranslations() {
         add("itemGroup."+TAB_NAME, "Tutorial Mod");
 
-        add(Register.TUTORIAL_ORE.get(), "Tutorial Ore");
+        add(Register.MOD_ORE_OVERWORLD.get(), "Mod Ore");
+        add(Register.MOD_ORE_INGOT.get(), "Mod Ore Ingot");
+        add(Register.MOD_ORE_CHUNK.get(), "Mod Ore Chunk");
     }
 }

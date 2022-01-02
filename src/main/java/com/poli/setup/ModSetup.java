@@ -9,7 +9,7 @@ import org.jetbrains.annotations.NotNull;
 public class ModSetup {
 
     // Creative mode tab wherever our mod items will be shown
-    public static final String TAB_NAME = "modTutorial";
+    public static final String TAB_NAME = "mod_tutorial";
 
     public static final CreativeModeTab ITEM_GROUP = new CreativeModeTab(TAB_NAME) {
         @Override

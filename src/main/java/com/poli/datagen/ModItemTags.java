@@ -14,7 +14,17 @@ public class ModItemTags extends ItemTagsProvider {
 
     @Override
     protected void addTags(){
-        tag(Tags.Items.ORES).add(Register.TUTORIAL_ORE_ITEM.get());
+        // Register the items as a ore or ingot etc to allow filtering in other mods
+        tag(Tags.Items.ORES)
+                .add(Register.MOD_ORE_OVERWORLD_ITEM.get());
+
+        tag(Tags.Items.INGOTS)
+                .add(Register.MOD_ORE_INGOT.get());
+
+        // Also, register them with a custom tag
+        tag(Register.MOD_ORE_ITEM)
+                .add(Register.MOD_ORE_OVERWORLD_ITEM.get())
+                .add(Register.MOD_ORE_INGOT.get());
     }
     @Override
     public @NotNull String getName(){return "Tutorial Mod Tags";}
