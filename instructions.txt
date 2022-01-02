@@ -1,0 +1,51 @@
+## Setup
+-> Download Forge Mod Development Kid
+-> Copy files from FMDK to project folder:
+	- $ cp -R mkd/gradle/ <p_folder>
+	- $ cp -R mdk/src/ <p_folder>
+	- $ cp mdk/gradlew* <p_folder>
+	- $ cp mdk/gradle.properties <p_folder>
+	- $ cp mdk/build.gradle <p_folder>
+-> Import gradle project in SDK
+-> Set Project SDK 17 as Project SDK
+-> Edit build.gradle 
+	- version
+	- group
+	- archiveBaseName
+	
+	// build gradle relevant info
+	
+	minecraft { mappings } -> allows for replace obfuscated minecraft src names to human legible ones
+
+	run { client sever data } -> run configurations to run minecraft from IDE
+
+	repositories, dependencies -> repositories and dependencies for the project
+-> Add useful dependencies to the gradle
+	- JEI
+	- TOP
+-> Edit gradle.properties to set JEI Version
+-> Go to gradle tasks and in foregradle runs use genIntelijRuns to generate the run client
+-> Press the refresh button to refresh the project and apply changes
+-> Set the run configuration to client and press the play button to run minecraft with our mod loaded
+-> If minecraft launched project setup is ready and we can start developing
+
+## Mod Init
+-> Rename the mod package and mod ID
+-> Any change done in the mod name and id must be changed in meta-inf/mods.toml
+-> Create a setup package and classes for clientsetup, modsetup and registration
+-> In the main mod class register event listeners for the clientsetup and modsetup and add a call for registration-> Note that the registration happens before the modloadingevent is launched, so we must call the registration before the modsetup and clientsetup events are fired
+-> In the registration package we must create a deferred register for blocks and items and add all the blocks and items that we want our mod to have to them, after that, in the init funcion, we add the deferred registers to the mod event bus
+-> In order to create the assets needed for the mod we have to create a folder /resources/assets/modname/textures/block. For this textures, sounds etc to be loaded into minecraft we have to create a json, and instead of doing it manually we create a datagenerator package.
+-> In the datagen package we will need to override all minecraft resource loading functions. We will need
+	- DataGenerators Class -> allows us to gather data from other datagenerator classes and subscribe it to the forge event bus. 
+	-----------------------------------------------------------------
+	- ModBlocksTags -> adds tags to the blocks in the generator (ie: canSpawnMobs, isMinable, requiresIronPick...)
+	- ModBlockState -> adds states to the blocks
+	- ModItemModels -> retrieves from resources the models for the items
+	- ModItemTags -> add tags to the items in the generator (ie: ore, chest...)
+	- ModLanguageProvider -> adds locale friendly items name and text
+	- ModLootTable -> creates the loot table associating what item drops each block
+	- ModRecipes -> creates the recipe table
+-> The datageneration will happen whenever we call for the run configuration data gen, this will generate the assets for our mod. This configuration is in minecraft/runs/data in the gradle file (Remember any change done to this will need for the gradle to re-generate the run configurations)
+-> Note that the file name for the textures in /resources/assets/modname/block must match the name indicated in the Register when creating the RegistryObject for the DeferredRegisters
+

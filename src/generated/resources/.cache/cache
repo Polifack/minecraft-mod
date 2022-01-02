@@ -1,0 +1,8 @@
+251bf89dee9824bbdbfad9f79ebfdedc41bf0988 assets/tutorialmod/blockstates/mod_ore.json
+30ed1f6ea66b7e47e131c20002cc4e5d2b758239 assets/tutorialmod/lang/en_us.json
+6aa3a58cbbe1b405c29d308ee478169954d621df assets/tutorialmod/models/block/mod_ore.json
+ac0d4726a955a3d5693ba30f7f779d1981a07e57 assets/tutorialmod/models/item/mod_ore.json
+041378693e9729cf3ef1e6ce3490fe143e13eaff data/forge/tags/blocks/ores.json
+041378693e9729cf3ef1e6ce3490fe143e13eaff data/forge/tags/items/ores.json
+041378693e9729cf3ef1e6ce3490fe143e13eaff data/minecraft/tags/blocks/mineable/pickaxe.json
+041378693e9729cf3ef1e6ce3490fe143e13eaff data/minecraft/tags/blocks/needs_iron_tool.json
