@@ -30,7 +30,7 @@ public class Register {
 
     // Get block properties
     public static final BlockBehaviour.Properties ORE_PROPERTIES =
-            BlockBehaviour.Properties.of(Material.STONE).strength(2f);
+            BlockBehaviour.Properties.of(Material.STONE).strength(2f).requiresCorrectToolForDrops();
 
     // Set the item properties
     public static final Item.Properties ITEM_PROPERTIES = new Item.Properties().tab(ModSetup.ITEM_GROUP);

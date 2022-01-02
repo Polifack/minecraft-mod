@@ -1,130 +1,117 @@
-[02Jan2022 18:06:29.876] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 1.18, --assetsDir, /home/poli/.gradle/caches/forge_gradle/assets, --gameDir, ., --fml.forgeVersion, 39.0.9, --fml.mcVersion, 1.18.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20211210.034407]
-[02Jan2022 18:06:29.880] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 9.0.18+9.0.18+main.77ffe0d4 starting: java version 17.0.1 by N/A
-[02Jan2022 18:06:29.987] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/home/poli/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%2327! Service=ModLauncher Env=CLIENT
-[02Jan2022 18:06:31.792] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, /home/poli/.gradle/caches/forge_gradle/assets, --assetIndex, 1.18]
-[18:06:37] [Render thread/WARN]: Assets URL 'union:/home/poli/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.18.1-39.0.9_mapped_official_1.18.1/forge-1.18.1-39.0.9_mapped_official_1.18.1-recomp.jar%2377!/assets/.mcassetsroot' uses unexpected schema
-[18:06:37] [Render thread/WARN]: Assets URL 'union:/home/poli/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.18.1-39.0.9_mapped_official_1.18.1/forge-1.18.1-39.0.9_mapped_official_1.18.1-recomp.jar%2377!/data/.mcassetsroot' uses unexpected schema
-[02Jan2022 18:06:37.653] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[18:06:37] [Render thread/INFO]: Setting user: Dev
-[18:06:37] [Render thread/INFO]: Backend library: LWJGL version 3.2.2 SNAPSHOT
-[18:06:37] [Render thread/ERROR]: Null comment for config option server, this is invalid and may be disallowed in the future.
-[18:06:39] [modloading-worker-0/INFO]: Forge mod loading, version 39.0.9, for MC 1.18.1 with MCP 20211210.034407
-[18:06:39] [modloading-worker-0/INFO]: MinecraftForge v39.0.9 Initialized
-[02Jan2022 18:06:41.644] [Render thread/WARN] [com.mojang.text2speech.NarratorLinux/]: ERROR : Couldn't load Narrator library : Unable to load library 'fliteWrapper':
+[02Jan2022 18:27:33.166] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 1.18, --assetsDir, /home/poli/.gradle/caches/forge_gradle/assets, --gameDir, ., --fml.forgeVersion, 39.0.9, --fml.mcVersion, 1.18.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20211210.034407]
+[02Jan2022 18:27:33.170] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 9.0.18+9.0.18+main.77ffe0d4 starting: java version 17.0.1 by N/A
+[02Jan2022 18:27:33.344] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/home/poli/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%2327! Service=ModLauncher Env=CLIENT
+[02Jan2022 18:27:35.441] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, /home/poli/.gradle/caches/forge_gradle/assets, --assetIndex, 1.18]
+[18:27:41] [Render thread/WARN]: Assets URL 'union:/home/poli/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.18.1-39.0.9_mapped_official_1.18.1/forge-1.18.1-39.0.9_mapped_official_1.18.1-recomp.jar%2377!/assets/.mcassetsroot' uses unexpected schema
+[18:27:41] [Render thread/WARN]: Assets URL 'union:/home/poli/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.18.1-39.0.9_mapped_official_1.18.1/forge-1.18.1-39.0.9_mapped_official_1.18.1-recomp.jar%2377!/data/.mcassetsroot' uses unexpected schema
+[02Jan2022 18:27:41.177] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[18:27:41] [Render thread/INFO]: Setting user: Dev
+[18:27:41] [Render thread/INFO]: Backend library: LWJGL version 3.2.2 SNAPSHOT
+[18:27:41] [Render thread/ERROR]: Null comment for config option server, this is invalid and may be disallowed in the future.
+[18:27:42] [modloading-worker-0/INFO]: Forge mod loading, version 39.0.9, for MC 1.18.1 with MCP 20211210.034407
+[18:27:42] [modloading-worker-0/INFO]: MinecraftForge v39.0.9 Initialized
+[02Jan2022 18:27:44.155] [Render thread/WARN] [com.mojang.text2speech.NarratorLinux/]: ERROR : Couldn't load Narrator library : Unable to load library 'fliteWrapper':
 libflite.so.1: cannot open shared object file: No such file or directory
 libflite.so.1: cannot open shared object file: No such file or directory
 Native library (linux-x86-64/libfliteWrapper.so) not found in resource path (/home/poli/projects/my-first-mod/build/classes/java/main:/home/poli/projects/my-first-mod/build/resources/main:/home/poli/.gradle/caches/forge_gradle/deobf_dependencies/mezz/jei/jei-1.18/9.0.0.40_mapped_official_1.18.1/jei-1.18-9.0.0.40_mapped_official_1.18.1.jar:/home/poli/.gradle/caches/forge_gradle/deobf_dependencies/curse/maven/the-one-probe-245211/3550084_mapped_official_1.18.1/the-one-probe-245211-3550084_mapped_official_1.18.1.jar:/home/poli/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.18.1-39.0.9_mapped_official_1.18.1/forge-1.18.1-39.0.9_mapped_official_1.18.1-recomp.jar:/home/poli/.gradle/caches/forge_gradle/minecraft_repo/versions/1.18.1/client-extra.jar:/home/poli/.gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlloader/1.18.1-39.0.9/880cc4e14fff9f43b08033afedf9ca189dcfcc4e/fmlloader-1.18.1-39.0.9.jar:/home/poli/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/31.0.1-jre/119ea2b2bc205b138974d351777b20f02b92704b/guava-31.0.1-jre.jar:/home/poli/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/25ea2e8b0c338a877313bd4672d3fe056ea78f0d/jsr305-3.0.2.jar:/home/poli/.gradle/caches/modules-2/files-2.1/ca.weblite/java-objc-bridge/1.0.0/6ef160c3133a78de015830860197602ca1c855d3/java-objc-bridge-1.0.0.jar:/home/poli/.gradle/caches/modules-2/files-2.1/net.minecraftforge/mergetool/1.1.3/d7d4b6eac7f49c59255c8ac25190802c29ac9a4a/mergetool-1.1.3-api.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/23.0.0/8cc20c07506ec18e0834947b84a864bfc094484e/annotations-23.0.0.jar:/home/poli/.gradle/caches/forge_gradle/mcp_repo/net/minecraft/mapping/1.18.1/mapping-1.18.1-mapping.zip:/home/poli/.gradle/caches/modules-2/files-2.1/org.openjdk.nashorn/nashorn-core/15.3/43977e804697048fc8d81d333a36c17d07a5b3dd/nashorn-core-15.3.jar:/home/poli/.gradle/caches/modules-2/files-2.1/cpw.mods/modlauncher/9.0.8/d16b6e06044ea01d132bfcdda850ad51a718e103/modlauncher-9.0.8.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-commons/9.1/8b971b182eb5cf100b9e8d4119152d83e00e0fdd/asm-commons-9.1.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-util/9.1/36464a45d871779f3383a8a9aba2b26562a86729/asm-util-9.1.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-analysis/9.1/4f61b83b81d8b659958f4bcc48907e93ecea55a0/asm-analysis-9.1.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-tree/9.1/c333f2a855069cb8eb17a40a3eb8b1b67755d0eb/asm-tree-9.1.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/9.1/a99500cf6eea30535eeac6be73899d048f8d12a8/asm-9.1.jar:/home/poli/.gradle/caches/modules-2/files-2.1/net.minecraftforge/accesstransformers/8.0.4/272d240aa73f42195b2a68e2ebd8b701ecf41f63/accesstransformers-8.0.4.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.antlr/antlr4-runtime/4.9.1/428664f05d2b7f7b7610204b5aa7c1763f62011a/antlr4-runtime-4.9.1.jar:/home/poli/.gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlcore/1.18.1-39.0.9/46aa14bd48d9780c1d1cc9bc4e167b6029e6942f/fmlcore-1.18.1-39.0.9.jar:/home/poli/.gradle/caches/modules-2/files-2.1/net.minecraftforge/eventbus/5.0.7/5589e7511c4993054e6a80890618b46ed53519a0/eventbus-5.0.7.jar:/home/poli/.gradle/caches/modules-2/files-2.1/net.minecraftforge/forgespi/4.0.11/beba03c49f418c8d66aae30a6df69bde4fce2f18/forgespi-4.0.11.jar:/home/poli/.gradle/caches/modules-2/files-2.1/net.minecraftforge/coremods/5.0.2/ca04eeee6c3764c151b2a2efa675057a7531acc4/coremods-5.0.2.jar:/home/poli/.gradle/caches/modules-2/files-2.1/net.minecraftforge/unsafe/0.2.0/54d7a0a5e8fdb71b973025caa46f341ae5904f39/unsafe-0.2.0.jar:/home/poli/.gradle/caches/modules-2/files-2.1/com.electronwill.night-config/toml/3.6.4/51d6cefb2b55ee55ee26b16391212fb2c7dfb4f4/toml-3.6.4.jar:/home/poli/.gradle/caches/modules-2/files-2.1/com.electronwill.night-config/core/3.6.4/510f174abbf1c947494db50ef2445683bd52c230/core-3.6.4.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-artifact/3.8.1/114a2dd16c4c568bf0ca57719b83f2685dcc5734/maven-artifact-3.8.1.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.12.0/c6842c86792ff03b9f1d1fe2aab8dc23aa6c6f0e/commons-lang3-3.12.0.jar:/home/poli/.gradle/caches/modules-2/files-2.1/net.jodah/typetools/0.8.3/98f84f353457629e81cc6827224871b1a8faa7af/typetools-0.8.3.jar:/home/poli/.gradle/caches/modules-2/files-2.1/net.minecrell/terminalconsoleappender/1.2.0/96d02cd3b384ff015a8fef4223bcb4ccf1717c95/terminalconsoleappender-1.2.0.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.15.0/ba55c13d7ac2fd44df9cc8074455719a33f375b9/log4j-core-2.15.0.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-slf4j18-impl/2.15.0/88f72ad364bfc3a7cf43186fc17212f2b4bb8d97/log4j-slf4j18-impl-2.15.0.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.15.0/4a5aa7e55a29391c6f66e0b259d5189aa11e45d0/log4j-api-2.15.0.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.jline/jline-reader/3.12.1/4382ab1382c7b6f379377ed5f665dc2f6e1218bc/jline-reader-3.12.1.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.jline/jline-terminal/3.12.1/c777448314e050d980a6b697c140f3bfe9eb7416/jline-terminal-3.12.1.jar:/home/poli/.gradle/caches/modules-2/files-2.1/net.sf.jopt-simple/jopt-simple/5.0.4/4fdac2fbe92dfad86aa6e9301736f6b4342a3f5c/jopt-simple-5.0.4.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar:/home/poli/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.8/431fc3cbc0ff81abdbfde070062741089c3ba874/gson-2.8.8.jar:/home/poli/.gradle/caches/modules-2/files-2.1/cpw.mods/bootstraplauncher/0.1.17/899fb8e3912bb7d14a6f9611de117f77db710ec3/bootstraplauncher-0.1.17.jar:/home/poli/.gradle/caches/modules-2/files-2.1/net.minecraftforge/javafmllanguage/1.18.1-39.0.9/5d8acfc6f79b4d125018fe84a1fcb625caf74398/javafmllanguage-1.18.1-39.0.9.jar:/home/poli/.gradle/caches/modules-2/files-2.1/net.minecraftforge/mclanguage/1.18.1-39.0.9/31be07593769abb4a95f3adfe1af53f7043d03be/mclanguage-1.18.1-39.0.9.jar:/home/poli/.gradle/caches/modules-2/files-2.1/com.mojang/blocklist/1.0.6/7039c2c6209064ee4132cea7a0737b63b92c725e/blocklist-1.0.6.jar:/home/poli/.gradle/caches/modules-2/files-2.1/com.mojang/patchy/2.1.6/ce112c16c6275fdfff2d30208533ec906a191f71/patchy-2.1.6.jar:/home/poli/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/5.8.2/3a4c610d5991654009653e55b3204065441e2f0d/oshi-core-5.8.2.jar:/home/poli/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna-platform/5.9.0/c535a5bda553d7d7690356c825010da74b2671b5/jna-platform-5.9.0.jar:/home/poli/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.9.0/8f503e6d9b500ceff299052d6be75b38c7257758/jna-5.9.0.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.8.0-beta4/83b0359d847ee053d745be7ec0d8e9e8a44304b4/slf4j-api-1.8.0-beta4.jar:/home/poli/.gradle/caches/modules-2/files-2.1/com.ibm.icu/icu4j/69.1/ff666ac55986650893aacb9e2e0003538e9799c0/icu4j-69.1.jar:/home/poli/.gradle/caches/modules-2/files-2.1/com.mojang/javabridge/1.2.24/c876796229b2ef5120f186eab5acc870699d3b9/javabridge-1.2.24.jar:/home/poli/.gradle/caches/modules-2/files-2.1/io.netty/netty-all/4.1.68.Final/b8266a3c93c1c051109f71d3449e5dcd5d60b333/netty-all-4.1.68.Final.jar:/home/poli/.gradle/caches/modules-2/files-2.1/com.google.guava/failureaccess/1.0.1/1dcf1de382a0bf95a3d8b0849546c88bac1292c9/failureaccess-1.0.1.jar:/home/poli/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.11.0/a2503f302b11ebde7ebc3df41daebe0e4eea3689/commons-io-2.11.0.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.5.13/e5f6cae5ca7ecaac1ec2827a9e2d65ae2869cada/httpclient-4.5.13.jar:/home/poli/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.15/49d94806b6e3dc933dacbd8acb0fdbab8ebd1e5d/commons-codec-1.15.jar:/home/poli/.gradle/caches/modules-2/files-2.1/com.mojang/brigadier/1.0.18/c1ef1234282716483c92183f49bef47b1a89bfa9/brigadier-1.0.18.jar:/home/poli/.gradle/caches/modules-2/files-2.1/com.mojang/datafixerupper/4.0.26/ebd6690f33871ccee9b6132c6480668ee2e35020/datafixerupper-4.0.26.jar:/home/poli/.gradle/caches/modules-2/files-2.1/com.mojang/authlib/3.2.38/7bba19e34be22fded9ceb409ca1e8fb7525daf55/authlib-3.2.38.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.21/4ec95b60d4e86b5c95a0e919cb172a0af98011ef/commons-compress-1.21.jar:/home/poli/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/4bfc12adfe4842bf07b657f0369c4cb522955686/commons-logging-1.2.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.4.14/9dd1a631c082d92ecd4bd8fd4cf55026c720a8c1/httpcore-4.4.14.jar:/home/poli/.gradle/caches/modules-2/files-2.1/it.unimi.dsi/fastutil/8.5.6/76f95700418a68fbc4ac050525261f05dc681ca1/fastutil-8.5.6.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-jemalloc/3.2.2/ee8e57a79300f78294576d87c4a587f8c99402e2/lwjgl-jemalloc-3.2.2.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-openal/3.2.2/2b772a102b0a11ee5f2109a5b136f4dc7c630827/lwjgl-openal-3.2.2.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-opengl/3.2.2/6ac5bb88b44c43ea195a570aab059f63da004cd8/lwjgl-opengl-3.2.2.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-glfw/3.2.2/d3ad4df38e400b8afba1de63f84338809399df5b/lwjgl-glfw-3.2.2.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-stb/3.2.2/3b8e6ebc5851dd3d17e37e5cadce2eff2a429f0f/lwjgl-stb-3.2.2.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-tinyfd/3.2.2/fcbe606c8f8da6f8f9a05e2c540eb1ee8632b0e9/lwjgl-tinyfd-3.2.2.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl/3.2.2/8ad6294407e15780b43e84929c40e4c5e997972e/lwjgl-3.2.2.jar:/home/poli/.gradle/caches/modules-2/files-2.1/com.mojang/text2speech/1.11.3/f378f889797edd7df8d32272c06ca80a1b6b0f58/text2speech-1.11.3.jar:/home/poli/.gradle/caches/modules-2/files-2.1/com.google.guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/b421526c5f297295adef1c886e5246c39d4ac629/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-qual/3.12.0/d5692f0526415fcc6de94bb5bfbd3afd9dd3b3e5/checker-qual-3.12.0.jar:/home/poli/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.7.1/458d9042f7aa6fa9a634df902b37f544e15aacac/error_prone_annotations-2.7.1.jar:/home/poli/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/1.3/ba035118bc8bac37d7eff77700720999acd9986d/j2objc-annotations-1.3.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.antlr/antlr4/4.9.1/e92af8ab33e428461927b484e90bb155a4f3a052/antlr4-4.9.1.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.codehaus.plexus/plexus-utils/3.2.1/13b015768e0d04849d2794e4c47eb02d01a0de32/plexus-utils-3.2.1.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.antlr/ST4/4.3/92f2c1ad8d84abcbeead6cf7f2c53a04166293c2/ST4-4.3.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.antlr/antlr-runtime/3.5.2/cd9cd41361c155f3af0f653009dcecb08d8b4afd/antlr-runtime-3.5.2.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.abego.treelayout/org.abego.treelayout.core/1.0.3/457216e8e6578099ae63667bb1e4439235892028/org.abego.treelayout.core-1.0.3.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.glassfish/javax.json/1.0.4/3178f73569fd7a1e5ffc464e680f7a8cc784b85a/javax.json-1.0.4.jar:/home/poli/.gradle/caches/modules-2/files-2.1/cpw.mods/securejarhandler/0.9.58/4c4b0bcbd0d9b631e0a8029267be39c98ef6f619/securejarhandler-0.9.58.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-jemalloc/3.2.2/268c08a150347e04e44ba56e359d62c9b78669df/lwjgl-jemalloc-3.2.2-natives-linux.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-openal/3.2.2/364f9f5c3947393083ab5f37a571f5603aadd0b/lwjgl-openal-3.2.2-natives-linux.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-opengl/3.2.2/338d33387919cb3f4cdba143c2b738a71ccfda60/lwjgl-opengl-3.2.2-natives-linux.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-glfw/3.2.2/957733f26a6661d4883da0335f7ef46d3bbbd7d/lwjgl-glfw-3.2.2-natives-linux.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-stb/3.2.2/172c52e586fecf43f759bc4f70a778c01f6fdcc1/lwjgl-stb-3.2.2-natives-linux.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-tinyfd/3.2.2/39e35b161c130635d9c8918ce04e887a30c5b687/lwjgl-tinyfd-3.2.2-natives-linux.jar:/home/poli/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl/3.2.2/ae7976827ca2a3741f6b9a843a89bacd637af350/lwjgl-3.2.2-natives-linux.jar:/home/poli/.gradle/caches/modules-2/files-2.1/com.mojang/text2speech/1.11.3/ac641755a2a841d1fca9e660194f42523ee5cfe0/text2speech-1.11.3-natives-linux.jar:/home/poli/.gradle/caches/modules-2/files-2.1/net.minecraftforge/srgutils/0.4.3/84aecb8fc78bd0dd7299bd9963ac9eb83bd00aad/srgutils-0.4.3.jar)
-[18:06:41] [Render thread/INFO]: Reloading ResourceManager: Default, Mod Resources
-[18:06:41] [Thread-0/FATAL]: theoneprobe config just got changed on the file system!
-[18:06:41] [Thread-0/FATAL]: theoneprobe config just got changed on the file system!
-[18:06:41] [Thread-0/FATAL]: theoneprobe config just got changed on the file system!
-[18:06:41] [Thread-0/FATAL]: theoneprobe config just got changed on the file system!
-[02Jan2022 18:06:47.906] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
-[02Jan2022 18:06:48.911] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: BETA Current: 39.0.9 Target: 39.0.9
-[18:06:50] [Render thread/INFO]: OpenAL initialized on device GM204 High Definition Audio Controller Digital Stereo (HDMI 2)
-[18:06:50] [Render thread/INFO]: Sound engine started
-[18:06:50] [Render thread/INFO]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
-[18:06:50] [Render thread/INFO]: Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
-[18:06:50] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[18:06:50] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[18:06:50] [Render thread/INFO]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[18:06:50] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[18:06:50] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[18:06:52] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
-[18:06:52] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[18:06:52] [Render thread/INFO]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[18:06:52] [Render thread/INFO]: Created: 256x128x0 jei:textures/atlas/gui.png-atlas
-[18:06:53] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
-[18:07:24] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[18:07:24] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
-[18:07:24] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[18:07:24] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[18:07:24] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[18:07:24] [Render thread/INFO]: Reloading ResourceManager: Default, the-one-probe-245211-3550084_mapped_official_1.18.1.jar, , main, jei-1.18-9.0.0.40_mapped_official_1.18.1.jar
-[18:07:27] [Render thread/INFO]: Loaded 7 recipes
-[18:07:28] [Render thread/INFO]: Loaded 1143 advancements
-[18:07:29] [Render thread/INFO]: Injecting existing registry data into this CLIENT instance
-[18:07:31] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[18:07:31] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
-[18:07:31] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[18:07:31] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[18:07:31] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[18:07:31] [Render thread/INFO]: Reloading ResourceManager: Default, the-one-probe-245211-3550084_mapped_official_1.18.1.jar, , main, jei-1.18-9.0.0.40_mapped_official_1.18.1.jar
-[18:07:32] [Render thread/INFO]: Loaded 7 recipes
-[18:07:33] [Render thread/INFO]: Loaded 1143 advancements
-[18:07:33] [Render thread/INFO]: Injecting existing registry data into this CLIENT instance
-[02Jan2022 18:07:35.055] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[18:07:35] [Server thread/INFO]: Starting integrated minecraft server version 1.18.1
-[18:07:35] [Server thread/INFO]: Generating keypair
-[18:07:35] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
-[18:07:37] [Render thread/INFO]: Preparing spawn area: 0%
-[18:07:37] [Render thread/INFO]: Preparing spawn area: 0%
-[18:07:37] [Render thread/INFO]: Preparing spawn area: 0%
-[18:07:37] [Render thread/INFO]: Preparing spawn area: 0%
-[18:07:37] [Render thread/INFO]: Preparing spawn area: 0%
-[18:07:43] [Render thread/INFO]: Preparing spawn area: 0%
-[18:07:43] [Render thread/INFO]: Preparing spawn area: 0%
-[18:07:43] [Render thread/INFO]: Preparing spawn area: 0%
-[18:07:43] [Render thread/INFO]: Preparing spawn area: 0%
-[18:07:43] [Render thread/INFO]: Preparing spawn area: 0%
-[18:07:43] [Render thread/INFO]: Preparing spawn area: 0%
-[18:07:43] [Render thread/INFO]: Preparing spawn area: 0%
-[18:07:43] [Render thread/INFO]: Preparing spawn area: 0%
-[18:07:43] [Render thread/INFO]: Preparing spawn area: 0%
-[18:07:43] [Render thread/INFO]: Preparing spawn area: 0%
-[18:07:43] [Render thread/INFO]: Preparing spawn area: 0%
-[18:07:44] [Render thread/INFO]: Preparing spawn area: 0%
-[18:07:44] [Render thread/INFO]: Preparing spawn area: 6%
-[18:07:44] [Render thread/INFO]: Preparing spawn area: 11%
-[18:07:45] [Render thread/INFO]: Preparing spawn area: 15%
-[18:07:45] [Render thread/INFO]: Preparing spawn area: 25%
-[18:07:46] [Render thread/INFO]: Preparing spawn area: 31%
-[18:07:46] [Render thread/INFO]: Preparing spawn area: 41%
-[18:07:48] [Render thread/INFO]: Preparing spawn area: 42%
-[18:07:48] [Render thread/INFO]: Preparing spawn area: 42%
-[18:07:48] [Render thread/INFO]: Preparing spawn area: 42%
-[18:07:48] [Render thread/INFO]: Preparing spawn area: 50%
-[18:07:49] [Render thread/INFO]: Preparing spawn area: 56%
-[18:07:50] [Render thread/INFO]: Preparing spawn area: 73%
-[18:07:50] [Render thread/INFO]: Preparing spawn area: 83%
-[18:07:50] [Render thread/INFO]: Preparing spawn area: 89%
-[18:07:51] [Server thread/INFO]: Successfully initialized permission handler forge:default_handler
-[18:07:51] [Render thread/INFO]: Time elapsed: 15355 ms
-[18:07:51] [Server thread/INFO]: Changing view distance to 12, from 10
-[18:07:51] [Server thread/INFO]: Changing simulation distance to 8, from 0
-[18:07:53] [Netty Local Client IO #0/INFO]: Connected to a modded server.
-[18:07:53] [Server thread/INFO]: Using new advancement loading for net.minecraft.server.PlayerAdvancements@5727f1d
-[18:07:53] [Server thread/INFO]: Dev[local:E:e54eceb6] logged in with entity id 185 at (4.692038642019341, 66.0, 105.96956404116197)
-[18:07:53] [Server thread/INFO]: Dev joined the game
-[18:07:54] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 2487ms or 49 ticks behind
-[18:07:54] [Render thread/INFO]: Starting JEI...
-[18:07:54] [Render thread/INFO]: Building ingredient list...
-[18:07:54] [Render thread/INFO]: Building ingredient list took 21.41 ms
-[18:07:54] [Render thread/INFO]: Building ingredient filter...
-[18:07:55] [Render thread/INFO]: Building ingredient filter took 923.5 ms
-[18:07:55] [Render thread/INFO]: Building bookmarks...
-[18:07:55] [Render thread/INFO]: Building bookmarks took 894.4 μs
-[18:07:55] [Render thread/INFO]: Building recipe registry...
-[18:07:55] [Render thread/INFO]: Building recipe registry took 14.99 ms
-[18:07:56] [Render thread/INFO]: Building runtime...
-[18:07:56] [Render thread/INFO]: Building runtime took 210.9 ms
-[18:07:56] [Render thread/INFO]: Starting JEI took 1.978 s
-[18:07:57] [Render thread/INFO]: Loaded 6 advancements
-[18:08:19] [Server thread/INFO]: Saving and pausing game...
-[18:08:20] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[18:08:20] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[18:08:20] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[18:08:20] [Server thread/INFO]: Dev lost connection: Disconnected
-[18:08:20] [Server thread/INFO]: Dev left the game
-[18:08:21] [Server thread/INFO]: Stopping singleplayer server as player logged out
-[18:08:21] [Server thread/INFO]: Stopping server
-[18:08:21] [Server thread/INFO]: Saving players
-[18:08:21] [Server thread/INFO]: Saving worlds
-[18:08:21] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[18:08:21] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[18:08:21] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[18:08:21] [Server thread/INFO]: ThreadedAnvilChunkStorage (New World): All chunks are saved
-[18:08:21] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[18:08:21] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[18:08:21] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
-[18:08:22] [Render thread/INFO]: Stopping!
+[18:27:44] [Render thread/INFO]: Reloading ResourceManager: Default, Mod Resources
+[18:27:44] [Thread-0/FATAL]: theoneprobe config just got changed on the file system!
+[18:27:44] [Thread-0/FATAL]: theoneprobe config just got changed on the file system!
+[18:27:44] [Thread-0/FATAL]: theoneprobe config just got changed on the file system!
+[18:27:44] [Thread-0/FATAL]: theoneprobe config just got changed on the file system!
+[02Jan2022 18:27:50.965] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[02Jan2022 18:27:52.021] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: BETA Current: 39.0.9 Target: 39.0.9
+[18:27:52] [Render thread/INFO]: OpenAL initialized on device GM204 High Definition Audio Controller Digital Stereo (HDMI 2)
+[18:27:52] [Render thread/INFO]: Sound engine started
+[18:27:53] [Render thread/INFO]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[18:27:53] [Render thread/INFO]: Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
+[18:27:53] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[18:27:53] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[18:27:53] [Render thread/INFO]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[18:27:53] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[18:27:53] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[18:27:55] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[18:27:55] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[18:27:55] [Render thread/INFO]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[18:27:55] [Render thread/INFO]: Created: 256x128x0 jei:textures/atlas/gui.png-atlas
+[18:27:56] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
+[18:28:55] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[18:28:55] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[18:28:55] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[18:28:55] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[18:28:55] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[18:28:55] [Render thread/INFO]: Reloading ResourceManager: Default, the-one-probe-245211-3550084_mapped_official_1.18.1.jar, , main, jei-1.18-9.0.0.40_mapped_official_1.18.1.jar
+[18:28:56] [Render thread/INFO]: Loaded 7 recipes
+[18:28:57] [Render thread/INFO]: Loaded 1143 advancements
+[18:28:57] [Render thread/INFO]: Injecting existing registry data into this CLIENT instance
+[18:28:57] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[18:28:57] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[18:28:57] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[18:28:57] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[18:28:57] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[18:28:57] [Render thread/INFO]: Reloading ResourceManager: Default, the-one-probe-245211-3550084_mapped_official_1.18.1.jar, , main, jei-1.18-9.0.0.40_mapped_official_1.18.1.jar
+[18:28:58] [Render thread/INFO]: Loaded 7 recipes
+[18:28:58] [Render thread/INFO]: Loaded 1143 advancements
+[18:28:58] [Render thread/INFO]: Injecting existing registry data into this CLIENT instance
+[02Jan2022 18:28:59.589] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[18:28:59] [Server thread/INFO]: Starting integrated minecraft server version 1.18.1
+[18:28:59] [Server thread/INFO]: Generating keypair
+[18:28:59] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[18:29:00] [Render thread/INFO]: Preparing spawn area: 0%
+[18:29:00] [Render thread/INFO]: Preparing spawn area: 0%
+[18:29:01] [Render thread/INFO]: Preparing spawn area: 0%
+[18:29:01] [Render thread/INFO]: Preparing spawn area: 0%
+[18:29:04] [Render thread/INFO]: Preparing spawn area: 0%
+[18:29:04] [Render thread/INFO]: Preparing spawn area: 0%
+[18:29:04] [Render thread/INFO]: Preparing spawn area: 0%
+[18:29:04] [Render thread/INFO]: Preparing spawn area: 0%
+[18:29:04] [Render thread/INFO]: Preparing spawn area: 0%
+[18:29:04] [Render thread/INFO]: Preparing spawn area: 15%
+[18:29:05] [Render thread/INFO]: Preparing spawn area: 24%
+[18:29:05] [Render thread/INFO]: Preparing spawn area: 37%
+[18:29:06] [Render thread/INFO]: Preparing spawn area: 42%
+[18:29:06] [Render thread/INFO]: Preparing spawn area: 54%
+[18:29:07] [Render thread/INFO]: Preparing spawn area: 69%
+[18:29:07] [Server thread/INFO]: Successfully initialized permission handler forge:default_handler
+[18:29:07] [Render thread/INFO]: Time elapsed: 7467 ms
+[18:29:07] [Server thread/INFO]: Changing view distance to 12, from 10
+[18:29:07] [Server thread/INFO]: Changing simulation distance to 8, from 0
+[18:29:08] [Netty Local Client IO #0/INFO]: Connected to a modded server.
+[18:29:08] [Server thread/INFO]: Using new advancement loading for net.minecraft.server.PlayerAdvancements@3debed11
+[18:29:08] [Server thread/INFO]: Dev[local:E:1a070317] logged in with entity id 181 at (4.692038642019341, 66.0, 105.96956404116197)
+[18:29:08] [Server thread/INFO]: Dev joined the game
+[18:29:09] [Render thread/INFO]: Starting JEI...
+[18:29:09] [Render thread/INFO]: Building ingredient list...
+[18:29:09] [Render thread/INFO]: Building ingredient list took 3.012 ms
+[18:29:09] [Render thread/INFO]: Building ingredient filter...
+[18:29:10] [Render thread/INFO]: Building ingredient filter took 430.4 ms
+[18:29:10] [Render thread/INFO]: Building bookmarks...
+[18:29:10] [Render thread/INFO]: Building bookmarks took 1.170 ms
+[18:29:10] [Render thread/INFO]: Building recipe registry...
+[18:29:10] [Render thread/INFO]: Building recipe registry took 16.74 ms
+[18:29:10] [Render thread/INFO]: Building runtime...
+[18:29:10] [Render thread/INFO]: Building runtime took 57.23 ms
+[18:29:10] [Render thread/INFO]: Starting JEI took 1.116 s
+[18:29:11] [Render thread/INFO]: Loaded 6 advancements
+[18:29:14] [Server thread/INFO]: Saving and pausing game...
+[18:29:14] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[18:29:15] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[18:29:15] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[18:29:46] [Server thread/INFO]: Saving and pausing game...
+[18:29:46] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[18:29:46] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[18:29:46] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[18:29:47] [Server thread/INFO]: Dev lost connection: Disconnected
+[18:29:47] [Server thread/INFO]: Dev left the game
+[18:29:47] [Server thread/INFO]: Stopping singleplayer server as player logged out
+[18:29:47] [Server thread/INFO]: Stopping server
+[18:29:47] [Server thread/INFO]: Saving players
+[18:29:47] [Server thread/INFO]: Saving worlds
+[18:29:47] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[18:29:47] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[18:29:47] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[18:29:47] [Server thread/INFO]: ThreadedAnvilChunkStorage (New World): All chunks are saved
+[18:29:47] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[18:29:47] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[18:29:47] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[18:29:55] [Render thread/INFO]: Stopping!
