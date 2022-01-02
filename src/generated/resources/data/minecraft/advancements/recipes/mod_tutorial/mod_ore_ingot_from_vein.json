@@ -2,17 +2,17 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "minecraft:modoreingot2"
+      "minecraft:mod_ore_ingot_from_vein"
     ]
   },
   "criteria": {
-    "has_chunk": {
+    "has_ore": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "tutorialmod:mod_ore_chunk"
+              "tutorialmod:mod_ore_vein"
             ]
           }
         ]
@@ -21,13 +21,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "minecraft:modoreingot2"
+        "recipe": "minecraft:mod_ore_ingot_from_vein"
       }
     }
   },
   "requirements": [
     [
-      "has_chunk",
+      "has_ore",
       "has_the_recipe"
     ]
   ]

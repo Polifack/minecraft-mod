@@ -1,6 +1,7 @@
 {
-  "block.tutorialmod.mod_ore_overworld": "Mod Ore",
+  "block.tutorialmod.mod_ore_vein": "Mod Ore",
   "item.tutorialmod.mod_ore_chunk": "Mod Ore Chunk",
   "item.tutorialmod.mod_ore_ingot": "Mod Ore Ingot",
+  "item.tutorialmod.mod_ore_sword": "Mod Ore Sword",
   "itemGroup.mod_tutorial": "Tutorial Mod"
 }

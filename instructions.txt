@@ -49,3 +49,10 @@
 -> The datageneration will happen whenever we call for the run configuration data gen, this will generate the assets for our mod. This configuration is in minecraft/runs/data in the gradle file (Remember any change done to this will need for the gradle to re-generate the run configurations)
 -> Note that the file name for the textures in /resources/assets/modname/block must match the name indicated in the Register when creating the RegistryObject for the DeferredRegisters
 
+## Add Item Workflow
+-> Create the item inside setup/register
+-> Add the item texture to /resources/assets/tutorialmod/textures
+-> Add the localization in /datagen/ModLanguageProvider
+-> Set the model path (inheriting or new) in /datagen/ModItemModels
+-> Set the tag in /datagen/ModItemTags
+-> Set the recipe or loot if needed in ModLootTable and ModRecipes

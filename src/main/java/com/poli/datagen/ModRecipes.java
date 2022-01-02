@@ -4,7 +4,9 @@ import com.poli.setup.Register;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.function.Consumer;
@@ -21,17 +23,29 @@ public class ModRecipes extends RecipeProvider {
         // smelting(<ingredients>, <result>, <experience>, <smelt_time>)
         // recipe unlock syntax:
         // unlockedBy(<condition>).save(consumer, <recipe_name>)
+        // shaped syntax:
+        // shaped(<result>).pattern().pattern().pattern().define().unlockedBy().save()
 
         // Recipe for smelt ore and get ingot
-        SimpleCookingRecipeBuilder.smelting(Ingredient.of(Register.MOD_ORE_ITEM),
-                Register.MOD_ORE_INGOT.get(), 1, 100)
-                .unlockedBy("has_ore",has(Register.MOD_ORE_ITEM))
-                .save(consumer, "modoreingot1");
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(Register.MOD_ORE_VEIN.get()),
+                        Register.MOD_ORE_INGOT.get(), 1, 100)
+                .unlockedBy("has_ore",has(Register.MOD_ORE_VEIN.get()))
+                .save(consumer, "mod_ore_ingot_from_vein");
 
         // Recipe for smelt chunk and get ingot
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(Register.MOD_ORE_CHUNK.get()),
                         Register.MOD_ORE_INGOT.get(), 0, 75)
                 .unlockedBy("has_chunk",has(Register.MOD_ORE_CHUNK.get()))
-                .save(consumer, "modoreingot2");
+                .save(consumer, "mod_ore_ingot_from_chunk");
+
+        // Recipe for Sword
+        ShapedRecipeBuilder.shaped(Register.MOD_ORE_SWORD.get())
+                .pattern(" x ")
+                .pattern(" x ")
+                .pattern(" # ")
+                .define('x', Register.MOD_ORE_INGOT.get())
+                .define('#', Items.STICK)
+                .unlockedBy("has_ore",has(Register.MOD_ORE_INGOT.get()))
+                .save(consumer, "mod_ore_sword");
     }
 }

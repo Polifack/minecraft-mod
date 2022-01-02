@@ -15,14 +15,14 @@ public class ModBlocksTags extends BlockTagsProvider {
     @Override
     protected void addTags(){
         // Vanilla Minecraft Tagging
-        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(Register.MOD_ORE_OVERWORLD.get());
-        tag(BlockTags.NEEDS_IRON_TOOL).add(Register.MOD_ORE_OVERWORLD.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(Register.MOD_ORE_VEIN.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(Register.MOD_ORE_VEIN.get());
 
         // Forge Tagging
-        tag(Tags.Blocks.ORES).add(Register.MOD_ORE_OVERWORLD.get());
+        tag(Tags.Blocks.ORES).add(Register.MOD_ORE_VEIN.get());
 
         // Custom Tagging
-        tag(Register.MOD_ORE).add(Register.MOD_ORE_OVERWORLD.get());
+        tag(Register.MOD_ORE).add(Register.MOD_ORE_VEIN.get());
     }
 
     @Override

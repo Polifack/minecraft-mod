@@ -2,16 +2,18 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "minecraft:modoreingot1"
+      "minecraft:mod_ore_ingot_from_chunk"
     ]
   },
   "criteria": {
-    "has_ore": {
+    "has_chunk": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "tag": "tutorialmod:mod_ore"
+            "items": [
+              "tutorialmod:mod_ore_chunk"
+            ]
           }
         ]
       }
@@ -19,13 +21,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "minecraft:modoreingot1"
+        "recipe": "minecraft:mod_ore_ingot_from_chunk"
       }
     }
   },
   "requirements": [
     [
-      "has_ore",
+      "has_chunk",
       "has_the_recipe"
     ]
   ]

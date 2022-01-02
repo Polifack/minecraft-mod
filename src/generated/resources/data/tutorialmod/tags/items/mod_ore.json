@@ -1,7 +1,8 @@
 {
   "replace": false,
   "values": [
-    "tutorialmod:mod_ore_overworld",
-    "tutorialmod:mod_ore_ingot"
+    "tutorialmod:mod_ore_vein",
+    "tutorialmod:mod_ore_ingot",
+    "tutorialmod:mod_ore_sword"
   ]
 }
