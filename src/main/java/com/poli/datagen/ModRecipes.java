@@ -98,6 +98,8 @@ public class ModRecipes extends RecipeProvider {
                 .define('#', Items.STICK)
                 .unlockedBy("has_ore",has(MOD_ORE_INGOT.get()))
                 .save(consumer, "mod_ore_hoe_right");
+
+        // Recipe for armor
         ShapedRecipeBuilder.shaped(MOD_ORE_HELMET.get())
                 .pattern("xxx")
                 .pattern("x x")
@@ -105,5 +107,28 @@ public class ModRecipes extends RecipeProvider {
                 .define('x', MOD_ORE_INGOT.get())
                 .unlockedBy("has_ore",has(MOD_ORE_INGOT.get()))
                 .save(consumer, "mod_ore_helmet");
+        ShapedRecipeBuilder.shaped(MOD_ORE_CHESTPLATE.get())
+                .pattern("x x")
+                .pattern("xxx")
+                .pattern("xxx")
+                .define('x', MOD_ORE_INGOT.get())
+                .unlockedBy("has_ore",has(MOD_ORE_INGOT.get()))
+                .save(consumer, "mod_ore_chestplate");
+        ShapedRecipeBuilder.shaped(MOD_ORE_LEGGINGS.get())
+                .pattern("xxx")
+                .pattern("x x")
+                .pattern("x x")
+                .define('x', MOD_ORE_INGOT.get())
+                .unlockedBy("has_ore",has(MOD_ORE_INGOT.get()))
+                .save(consumer, "mod_ore_leggings");
+        ShapedRecipeBuilder.shaped(MOD_ORE_BOOTS.get())
+                .pattern("   ")
+                .pattern("x x")
+                .pattern("x x")
+                .define('x', MOD_ORE_INGOT.get())
+                .unlockedBy("has_ore",has(MOD_ORE_INGOT.get()))
+                .save(consumer, "mod_ore_boots");
+
+
     }
 }

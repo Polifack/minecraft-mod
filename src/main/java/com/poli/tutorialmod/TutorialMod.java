@@ -32,14 +32,19 @@ public class TutorialMod
     public static final String MODID = "tutorialmod";
 
     public TutorialMod() {
-        // Start the registration
+        // Set Internal Server event hooks
+        ModSetup.setup();
+
+        // Set defered registers start
         Register.init();
 
-        // Get the ModBus
+        // Get the Starting ModBus
         IEventBus modbus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        // register the events to the listener
+        // Register the Internal Server Events to the Startup Modbus
         modbus.addListener(ModSetup::init);
+
+
         DistExecutor.unsafeRunWhenOn(Dist.CLIENT, ()->()->modbus.addListener(ClientSetup::init));
     }
 }

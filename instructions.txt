@@ -59,14 +59,66 @@
 
 ## Refactorization
 -> Split item/blocks creation from register to items/blocks package
-
-
-
+-> Create a base Material class for ease the creation of armors
 
 ## Anotations
+-> To search for a class in intellij use ctrl+n. This is useful to search for minecraft implementations of stuff
 
 -> Tools
     base = {bonus=1, speed_modifier=4}
     item.bonus = item.bonus + tier.bonus + base.bonus
     item.atk_speed = item.atk_speed + base.atk_speed
-    SwordItem(tier, attack_mod, speed_mod, properties)
+    XXXItem(tier, attack_mod, speed_mod, properties)
+
+-> Armor
+    ModArmorMaterialBase(enchantability, duration[], defense[], knockback_res, toughness, name, sound, rep_ingr)
+    defense = the number of armor shields
+    knockback_res = the value of knockback_res ingame
+    toughness = the value of toughness ingame * 0.1
+    name must match the textures in /textures/models/armor/<name>_layer_X.png
+
+-> World Generation
+    In order to make a vein generate in the overworld we must
+        1)  Define the TargetBlocks for sustitution (or a list of them)
+        2)  Generate OreConfiguration using the TargetBlocks and a number that is the OreVeinSize
+        3)  Generate a ConfiguredFeature using Feature.ORE(OreConfiguration)
+        4)  Register the ConfiguredFeature in the configured features registry (note that this is a registry
+            from vanilla minecraft) using:
+
+            BuiltinRegistries.register(BuiltinRegistries.CONFIGURED_FEATURE,
+                                       new ResourceLocation(configured_feature_name),
+                                       ConfiguredFeature)
+
+            Note that this will return another ConfiguredFeature, but this time registered
+
+        5)  Set the placement options using .place(...placements). For example:
+
+            CountPlacement.of(generation_retries),
+            BiomeFilter.biome(),
+            InSquarePlacement.spread(),
+            HeightRangePlacement.uniform(
+                    VerticalAnchor.absolute(start_gen_height),
+                    VerticalAnchor.absolute(end_gen_height))
+
+            Note that this will return a PlacedFeature that we will need to register again
+
+        6) Use placement features to register the PlacedFeature
+
+            PlacementUtils.register(placed_feature_name, PlacedFeature)
+
+        [*] All previous steps should be wrapped up in a function that allows us to call it from Minecraft Init Events
+
+        7) In a function that is hooked to the forge event bus and to the BiomeLoadingEvent hook our PlacedFeature:
+
+            Hooked to event function:
+            IEventBus bus = MinecraftForge.EVENT_BUS;
+            bus.addListener(<generation_class>::<generation_event_function>);
+
+            Generation Event Function:
+            event.getGeneration().addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, placed_feature);
+
+            Note that we are choosing the GenerationStep of Underground ores
+
+        8) In a function that is hooked to the forge FMLCommonSetupEvent event hook our OreGeneration Function
+
+            event.enqueueWork(ModOreGeneration::registerOres);
