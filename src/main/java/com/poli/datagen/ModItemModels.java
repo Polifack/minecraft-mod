@@ -6,6 +6,8 @@ import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
+import static com.poli.items.ModItems.*;
+
 public class ModItemModels extends ItemModelProvider {
     public ModItemModels(DataGenerator gen, ExistingFileHelper fh){super(gen, TutorialMod.MODID, fh);}
 
@@ -13,7 +15,7 @@ public class ModItemModels extends ItemModelProvider {
     protected void registerModels(){
         // register the model for the ore
         // we use withExistingParent because we are inheriting from other object
-        withExistingParent(Register.MOD_ORE_VEIN_ITEM.get()
+        withExistingParent(MOD_ORE_VEIN_ITEM.get()
                 .getRegistryName().getPath(), modLoc("block/mod_ore_vein"));
 
         // register the model for the chunk and ingot
@@ -22,21 +24,21 @@ public class ModItemModels extends ItemModelProvider {
         //                  <texture key?>, <mod_location>)
 
         // Set textures for chunk / ingot
-        singleTexture(Register.MOD_ORE_CHUNK.get().getRegistryName().getPath(), mcLoc("item/generated"),
+        singleTexture(MOD_ORE_CHUNK.get().getRegistryName().getPath(), mcLoc("item/generated"),
                 "layer0", modLoc("item/mod_ore_chunk"));
-        singleTexture(Register.MOD_ORE_INGOT.get().getRegistryName().getPath(), mcLoc("item/generated"),
+        singleTexture(MOD_ORE_INGOT.get().getRegistryName().getPath(), mcLoc("item/generated"),
                 "layer0", modLoc("item/mod_ore_ingot"));
 
         // Set textures for tools
-        singleTexture(Register.MOD_ORE_SWORD.get().getRegistryName().getPath(), mcLoc("item/generated"),
+        singleTexture(MOD_ORE_SWORD.get().getRegistryName().getPath(), mcLoc("item/generated"),
                 "layer0",modLoc("item/mod_ore_sword"));
-        singleTexture(Register.MOD_ORE_PICKAXE.get().getRegistryName().getPath(), mcLoc("item/generated"),
+        singleTexture(MOD_ORE_PICKAXE.get().getRegistryName().getPath(), mcLoc("item/generated"),
                 "layer0",modLoc("item/mod_ore_pickaxe"));
-        singleTexture(Register.MOD_ORE_SHOVEL.get().getRegistryName().getPath(), mcLoc("item/generated"),
+        singleTexture(MOD_ORE_SHOVEL.get().getRegistryName().getPath(), mcLoc("item/generated"),
                 "layer0",modLoc("item/mod_ore_shovel"));
-        singleTexture(Register.MOD_ORE_HOE.get().getRegistryName().getPath(), mcLoc("item/generated"),
+        singleTexture(MOD_ORE_HOE.get().getRegistryName().getPath(), mcLoc("item/generated"),
                 "layer0",modLoc("item/mod_ore_hoe"));
-        singleTexture(Register.MOD_ORE_AXE.get().getRegistryName().getPath(), mcLoc("item/generated"),
+        singleTexture(MOD_ORE_AXE.get().getRegistryName().getPath(), mcLoc("item/generated"),
                 "layer0",modLoc("item/mod_ore_axe"));
 
     }

@@ -56,3 +56,17 @@
 -> Set the model path (inheriting or new) in /datagen/ModItemModels
 -> Set the tag in /datagen/ModItemTags
 -> Set the recipe or loot if needed in ModLootTable and ModRecipes
+
+## Refactorization
+-> Split item/blocks creation from register to items/blocks package
+
+
+
+
+## Anotations
+
+-> Tools
+    base = {bonus=1, speed_modifier=4}
+    item.bonus = item.bonus + tier.bonus + base.bonus
+    item.atk_speed = item.atk_speed + base.atk_speed
+    SwordItem(tier, attack_mod, speed_mod, properties)

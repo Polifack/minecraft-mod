@@ -6,11 +6,13 @@ import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
+import static com.poli.blocks.ModBlocks.MOD_ORE_VEIN;
+
 public class ModBlockStates extends BlockStateProvider {
     public ModBlockStates(DataGenerator gen, ExistingFileHelper fh) {super(gen, TutorialMod.MODID, fh);}
 
     @Override
     protected void registerStatesAndModels() {
-        simpleBlock(Register.MOD_ORE_VEIN.get());
+        simpleBlock(MOD_ORE_VEIN.get());
     }
 }
