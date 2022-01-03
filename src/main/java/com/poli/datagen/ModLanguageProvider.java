@@ -33,6 +33,10 @@ public class ModLanguageProvider extends LanguageProvider {
             add(MOD_ORE_SHOVEL.get(),  "Mod Ore Shovel");
             add(MOD_ORE_PICKAXE.get(), "Mod Ore Pickaxe");
             add(MOD_ORE_HOE.get(),     "Mod Ore Hoe");
+            add(MOD_ORE_HELMET.get(), "Mod Ore Helmet");
+            add(MOD_ORE_CHESTPLATE.get(), "Mod Ore Chestplate");
+            add(MOD_ORE_LEGGINGS.get(), "Mod Ore Leggings");
+            add(MOD_ORE_BOOTS.get(), "Mod Ore Boots");
         }
 
         if (this.locale.equals("es_es")){
@@ -44,6 +48,10 @@ public class ModLanguageProvider extends LanguageProvider {
             add(MOD_ORE_SHOVEL.get(),  "Pala del Mineral del Mod");
             add(MOD_ORE_PICKAXE.get(), "Pico del Mineral del Mod");
             add(MOD_ORE_HOE.get(),     "Azada del Mineral del Mod");
+            add(MOD_ORE_HELMET.get(), "Casco del Mineral del Mod");
+            add(MOD_ORE_CHESTPLATE.get(), "Pechera del Mineral del Mod");
+            add(MOD_ORE_LEGGINGS.get(), "Pantalones del Mineral del Mod");
+            add(MOD_ORE_BOOTS.get(), "Botas del Mineral del Mod");
         }
 
 

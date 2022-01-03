@@ -20,7 +20,7 @@ public class ModItemModels extends ItemModelProvider {
 
         // register the model for the chunk and ingot
         // se use singleTexture because the block will be a simple image
-        // singleTexture( <item_name in registry>, <parent location, usually a minecraft item>,
+        // singleTexture( <item_name in registryitem>, <parent location, usually a minecraft item>,
         //                  <texture key?>, <mod_location>)
 
         // Set textures for chunk / ingot
@@ -28,6 +28,9 @@ public class ModItemModels extends ItemModelProvider {
                 "layer0", modLoc("item/mod_ore_chunk"));
         singleTexture(MOD_ORE_INGOT.get().getRegistryName().getPath(), mcLoc("item/generated"),
                 "layer0", modLoc("item/mod_ore_ingot"));
+
+        // Set textures for armor worn
+        // withExistingParent(MOD_ORE_HELMET.get().getRegistryName().getPath(),modLoc("models/armor"));
 
         // Set textures for tools
         singleTexture(MOD_ORE_SWORD.get().getRegistryName().getPath(), mcLoc("item/generated"),
@@ -40,6 +43,16 @@ public class ModItemModels extends ItemModelProvider {
                 "layer0",modLoc("item/mod_ore_hoe"));
         singleTexture(MOD_ORE_AXE.get().getRegistryName().getPath(), mcLoc("item/generated"),
                 "layer0",modLoc("item/mod_ore_axe"));
+
+        // set textures for armor items
+        singleTexture(MOD_ORE_HELMET.get().getRegistryName().getPath(), mcLoc("item/generated"),
+                "layer0",modLoc("item/mod_ore_helmet"));
+        singleTexture(MOD_ORE_CHESTPLATE.get().getRegistryName().getPath(), mcLoc("item/generated"),
+                "layer0",modLoc("item/mod_ore_chestplate"));
+        singleTexture(MOD_ORE_LEGGINGS.get().getRegistryName().getPath(), mcLoc("item/generated"),
+                "layer0",modLoc("item/mod_ore_leggings"));
+        singleTexture(MOD_ORE_BOOTS.get().getRegistryName().getPath(), mcLoc("item/generated"),
+                "layer0",modLoc("item/mod_ore_boots"));
 
     }
 }

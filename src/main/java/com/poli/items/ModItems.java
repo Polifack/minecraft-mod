@@ -1,5 +1,6 @@
 package com.poli.items;
 
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.DeferredRegister;
@@ -7,6 +8,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import static com.poli.blocks.ModBlocks.MOD_ORE_VEIN;
+import static com.poli.items.ModArmorMaterials.MOD_ORE_ARMOR_MATERIAL;
 import static com.poli.items.ModItemsProperties.ITEM_PROPERTIES;
 import static com.poli.items.ModItemsTiers.ORE_MOD_TIER;
 import static com.poli.tutorialmod.TutorialMod.MODID;
@@ -26,6 +28,8 @@ public class ModItems {
     public static final RegistryObject<Item> MOD_ORE_INGOT =
             DR_ITEMS.register("mod_ore_ingot", ()->new Item(ITEM_PROPERTIES));
     public static final RegistryObject<Item> MOD_ORE_VEIN_ITEM = fromBlock(MOD_ORE_VEIN);
+
+    // Tools
     public static final RegistryObject<Item> MOD_ORE_SWORD =
             DR_ITEMS.register("mod_ore_sword",
                     ()->new SwordItem(ORE_MOD_TIER, 3,-2.4f, (ITEM_PROPERTIES)));
@@ -46,4 +50,17 @@ public class ModItems {
             DR_ITEMS.register("mod_ore_hoe",
                     ()->new HoeItem(ORE_MOD_TIER, -3,0f, (ITEM_PROPERTIES)));
 
+    // Armor
+    public static final RegistryObject<Item> MOD_ORE_HELMET =
+            DR_ITEMS.register("mod_ore_helmet",
+                    ()->new ArmorItem(MOD_ORE_ARMOR_MATERIAL, EquipmentSlot.HEAD, ITEM_PROPERTIES));
+    public static final RegistryObject<Item> MOD_ORE_LEGGINGS =
+            DR_ITEMS.register("mod_ore_leggings",
+                    ()->new ArmorItem(MOD_ORE_ARMOR_MATERIAL, EquipmentSlot.LEGS, ITEM_PROPERTIES));
+    public static final RegistryObject<Item> MOD_ORE_CHESTPLATE =
+            DR_ITEMS.register("mod_ore_chestplate",
+                    ()->new ArmorItem(MOD_ORE_ARMOR_MATERIAL, EquipmentSlot.CHEST, ITEM_PROPERTIES));
+    public static final RegistryObject<Item> MOD_ORE_BOOTS =
+            DR_ITEMS.register("mod_ore_boots",
+                    ()->new ArmorItem(MOD_ORE_ARMOR_MATERIAL, EquipmentSlot.FEET, ITEM_PROPERTIES));
 }

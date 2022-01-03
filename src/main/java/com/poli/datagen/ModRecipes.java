@@ -98,5 +98,12 @@ public class ModRecipes extends RecipeProvider {
                 .define('#', Items.STICK)
                 .unlockedBy("has_ore",has(MOD_ORE_INGOT.get()))
                 .save(consumer, "mod_ore_hoe_right");
+        ShapedRecipeBuilder.shaped(MOD_ORE_HELMET.get())
+                .pattern("xxx")
+                .pattern("x x")
+                .pattern("   ")
+                .define('x', MOD_ORE_INGOT.get())
+                .unlockedBy("has_ore",has(MOD_ORE_INGOT.get()))
+                .save(consumer, "mod_ore_helmet");
     }
 }

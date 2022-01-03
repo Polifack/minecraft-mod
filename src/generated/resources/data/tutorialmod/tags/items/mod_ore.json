@@ -7,6 +7,7 @@
     "tutorialmod:mod_ore_axe",
     "tutorialmod:mod_ore_shovel",
     "tutorialmod:mod_ore_hoe",
-    "tutorialmod:mod_ore_pickaxe"
+    "tutorialmod:mod_ore_pickaxe",
+    "tutorialmod:mod_ore_helmet"
   ]
 }

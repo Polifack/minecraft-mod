@@ -1,9 +1,13 @@
 {
   "block.tutorialmod.mod_ore_vein": "Mod Ore",
   "item.tutorialmod.mod_ore_axe": "Mod Ore Axe",
+  "item.tutorialmod.mod_ore_boots": "Mod Ore Boots",
+  "item.tutorialmod.mod_ore_chestplate": "Mod Ore Chestplate",
   "item.tutorialmod.mod_ore_chunk": "Mod Ore Chunk",
+  "item.tutorialmod.mod_ore_helmet": "Mod Ore Helmet",
   "item.tutorialmod.mod_ore_hoe": "Mod Ore Hoe",
   "item.tutorialmod.mod_ore_ingot": "Mod Ore Ingot",
+  "item.tutorialmod.mod_ore_leggings": "Mod Ore Leggings",
   "item.tutorialmod.mod_ore_pickaxe": "Mod Ore Pickaxe",
   "item.tutorialmod.mod_ore_shovel": "Mod Ore Shovel",
   "item.tutorialmod.mod_ore_sword": "Mod Ore Sword",

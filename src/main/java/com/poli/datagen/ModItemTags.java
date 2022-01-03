@@ -32,7 +32,8 @@ public class ModItemTags extends ItemTagsProvider {
                 .add(MOD_ORE_AXE.get())
                 .add(MOD_ORE_SHOVEL.get())
                 .add(MOD_ORE_HOE.get())
-                .add(MOD_ORE_PICKAXE.get());
+                .add(MOD_ORE_PICKAXE.get())
+                .add(MOD_ORE_HELMET.get());
     }
     @Override
     public @NotNull String getName(){return "Tutorial Mod Tags";}
