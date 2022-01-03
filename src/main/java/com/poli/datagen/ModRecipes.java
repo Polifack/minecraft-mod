@@ -38,7 +38,7 @@ public class ModRecipes extends RecipeProvider {
                 .unlockedBy("has_chunk",has(Register.MOD_ORE_CHUNK.get()))
                 .save(consumer, "mod_ore_ingot_from_chunk");
 
-        // Recipe for Sword
+        // Recipe for Tools
         ShapedRecipeBuilder.shaped(Register.MOD_ORE_SWORD.get())
                 .pattern(" x ")
                 .pattern(" x ")
@@ -47,5 +47,53 @@ public class ModRecipes extends RecipeProvider {
                 .define('#', Items.STICK)
                 .unlockedBy("has_ore",has(Register.MOD_ORE_INGOT.get()))
                 .save(consumer, "mod_ore_sword");
+        ShapedRecipeBuilder.shaped(Register.MOD_ORE_AXE.get())
+                .pattern(" xx")
+                .pattern(" #x")
+                .pattern(" # ")
+                .define('x', Register.MOD_ORE_INGOT.get())
+                .define('#', Items.STICK)
+                .unlockedBy("has_ore",has(Register.MOD_ORE_INGOT.get()))
+                .save(consumer, "mod_ore_axe_right");
+        ShapedRecipeBuilder.shaped(Register.MOD_ORE_AXE.get())
+                .pattern("xx ")
+                .pattern("x# ")
+                .pattern(" # ")
+                .define('x', Register.MOD_ORE_INGOT.get())
+                .define('#', Items.STICK)
+                .unlockedBy("has_ore",has(Register.MOD_ORE_INGOT.get()))
+                .save(consumer, "mod_ore_axe_left");
+        ShapedRecipeBuilder.shaped(Register.MOD_ORE_PICKAXE.get())
+                .pattern("xxx")
+                .pattern(" # ")
+                .pattern(" # ")
+                .define('x', Register.MOD_ORE_INGOT.get())
+                .define('#', Items.STICK)
+                .unlockedBy("has_ore",has(Register.MOD_ORE_INGOT.get()))
+                .save(consumer, "mod_ore_pickaxe");
+        ShapedRecipeBuilder.shaped(Register.MOD_ORE_SHOVEL.get())
+                .pattern(" x ")
+                .pattern(" # ")
+                .pattern(" # ")
+                .define('x', Register.MOD_ORE_INGOT.get())
+                .define('#', Items.STICK)
+                .unlockedBy("has_ore",has(Register.MOD_ORE_INGOT.get()))
+                .save(consumer, "mod_ore_shovel");
+        ShapedRecipeBuilder.shaped(Register.MOD_ORE_HOE.get())
+                .pattern("xx ")
+                .pattern(" # ")
+                .pattern(" # ")
+                .define('x', Register.MOD_ORE_INGOT.get())
+                .define('#', Items.STICK)
+                .unlockedBy("has_ore",has(Register.MOD_ORE_INGOT.get()))
+                .save(consumer, "mod_ore_hoe_left");
+        ShapedRecipeBuilder.shaped(Register.MOD_ORE_HOE.get())
+                .pattern(" xx")
+                .pattern(" # ")
+                .pattern(" # ")
+                .define('x', Register.MOD_ORE_INGOT.get())
+                .define('#', Items.STICK)
+                .unlockedBy("has_ore",has(Register.MOD_ORE_INGOT.get()))
+                .save(consumer, "mod_ore_hoe_right");
     }
 }

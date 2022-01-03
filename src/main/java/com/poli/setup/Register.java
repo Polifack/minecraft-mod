@@ -3,9 +3,7 @@ package com.poli.setup;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -49,17 +47,41 @@ public class Register {
     public static final RegistryObject<Item> MOD_ORE_INGOT =
             DR_ITEMS.register("mod_ore_ingot", ()->new Item(ITEM_PROPERTIES));
 
-    // Create the Ore Tier
-    public static final ForgeTier ORE_MOD_TIER = new ForgeTier(1, 1500, 1f,
-            4f, 10, BlockTags.NEEDS_IRON_TOOL,
+    // Create the Mod Ore Tier
+    // Here should be all changes that apply to all weapons
+    // copy the diamond tier
+    // lv=3, uses=1500, speed=8.0F, dmg=3.0F, enchant=10
+
+    public static final ForgeTier ORE_MOD_TIER = new ForgeTier(3, 1500, 8.0f,
+            3.0f, 10, BlockTags.NEEDS_IRON_TOOL,
             ()-> Ingredient.of(MOD_ORE_INGOT.get()));
 
-    // Create a sword
-    // SwordItem(tier, attack_mod, speed_mod, properties
+    // Create the Mod Ore Armor Material
+
+    // Create some tools
+    // base = {bonus=1, speed_modifier=4}
+    // item.bonus = item.bonus + tier.bonus + base.bonus
+    // item.atk_speed = item.atk_speed + base.atk_speed
+    // SwordItem(tier, attack_mod, speed_mod, properties)
     public static final RegistryObject<Item> MOD_ORE_SWORD =
             DR_ITEMS.register("mod_ore_sword",
-                    ()->new SwordItem(ORE_MOD_TIER, 2,3, (ITEM_PROPERTIES)));
+                    ()->new SwordItem(ORE_MOD_TIER, 3,-2.4f, (ITEM_PROPERTIES)));
 
+    public static final RegistryObject<Item> MOD_ORE_AXE =
+            DR_ITEMS.register("mod_ore_axe",
+                    ()->new AxeItem(ORE_MOD_TIER, 5,-3f, (ITEM_PROPERTIES)));
+
+    public static final RegistryObject<Item> MOD_ORE_SHOVEL =
+            DR_ITEMS.register("mod_ore_shovel",
+                    ()->new ShovelItem(ORE_MOD_TIER, 1.5f,-3f, (ITEM_PROPERTIES)));
+
+    public static final RegistryObject<Item> MOD_ORE_PICKAXE =
+            DR_ITEMS.register("mod_ore_pickaxe",
+                    ()->new PickaxeItem(ORE_MOD_TIER, 1,-2.8f, (ITEM_PROPERTIES)));
+
+    public static final RegistryObject<Item> MOD_ORE_HOE =
+            DR_ITEMS.register("mod_ore_hoe",
+                    ()->new HoeItem(ORE_MOD_TIER, -3,0f, (ITEM_PROPERTIES)));
 
     // Create a tag for the items in our mod
     public static final Tags.IOptionalNamedTag<Block> MOD_ORE =

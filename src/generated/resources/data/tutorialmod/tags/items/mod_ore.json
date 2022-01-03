@@ -3,6 +3,10 @@
   "values": [
     "tutorialmod:mod_ore_vein",
     "tutorialmod:mod_ore_ingot",
-    "tutorialmod:mod_ore_sword"
+    "tutorialmod:mod_ore_sword",
+    "tutorialmod:mod_ore_axe",
+    "tutorialmod:mod_ore_shovel",
+    "tutorialmod:mod_ore_hoe",
+    "tutorialmod:mod_ore_pickaxe"
   ]
 }

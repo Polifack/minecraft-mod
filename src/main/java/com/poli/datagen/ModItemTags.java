@@ -25,7 +25,11 @@ public class ModItemTags extends ItemTagsProvider {
         tag(Register.MOD_ORE_ITEM)
                 .add(Register.MOD_ORE_VEIN_ITEM.get())
                 .add(Register.MOD_ORE_INGOT.get())
-                .add(Register.MOD_ORE_SWORD.get());
+                .add(Register.MOD_ORE_SWORD.get())
+                .add(Register.MOD_ORE_AXE.get())
+                .add(Register.MOD_ORE_SHOVEL.get())
+                .add(Register.MOD_ORE_HOE.get())
+                .add(Register.MOD_ORE_PICKAXE.get());
     }
     @Override
     public @NotNull String getName(){return "Tutorial Mod Tags";}

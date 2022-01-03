@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " xx",
+    " #x",
+    " # "
+  ],
+  "key": {
+    "x": {
+      "item": "tutorialmod:mod_ore_ingot"
+    },
+    "#": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "tutorialmod:mod_ore_axe"
+  }
+}
