@@ -15,7 +15,7 @@ Development of a minecraft mod to learn the forge API and internal workings of m
 
 ## Mod Contents
 
-- Created a new Zurrudium Vein Ore
+- Created a Zurrudium Ore
 - Created a Zurrudium Chunk that drops from that vein
 - Created a Zurrudium Ingot got from melting the chunk or the vein (if mined with silk touch)
 - Created Zurrudium tools and armor
