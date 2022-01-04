@@ -7,7 +7,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.function.Supplier;
 
-import static com.poli.tutorialmod.TutorialMod.MODID;
+import static com.poli.main.ZurrudiumMod.MODID;
 
 public class ModArmorMaterialBase implements ArmorMaterial {
     private final int enchantability;

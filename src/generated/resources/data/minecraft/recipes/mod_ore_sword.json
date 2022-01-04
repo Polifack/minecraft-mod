@@ -7,13 +7,13 @@
   ],
   "key": {
     "x": {
-      "item": "tutorialmod:mod_ore_ingot"
+      "item": "zurrudium_mod:zurrudium_ingot"
     },
     "#": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "tutorialmod:mod_ore_sword"
+    "item": "zurrudium_mod:zurrudium_sword"
   }
 }

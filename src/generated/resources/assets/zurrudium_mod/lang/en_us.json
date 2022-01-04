@@ -1,0 +1,17 @@
+{
+  "block.zurrudium_mod.zurrudium_ore": "Zurrudium Ore",
+  "item.zurrudium_mod.lightning_hammer": "Lightning Hammer",
+  "item.zurrudium_mod.poison_dagger": "Poisonous Dagger",
+  "item.zurrudium_mod.zurrudium_axe": "Zurrudium Axe",
+  "item.zurrudium_mod.zurrudium_boots": "Zurrudium Boots",
+  "item.zurrudium_mod.zurrudium_chestplate": "Zurrudium Chestplate",
+  "item.zurrudium_mod.zurrudium_helmet": "Zurrudium Helmet",
+  "item.zurrudium_mod.zurrudium_hoe": "Zurrudium Hoe",
+  "item.zurrudium_mod.zurrudium_ingot": "Zurrudium Ingot",
+  "item.zurrudium_mod.zurrudium_leggings": "Zurrudium Leggings",
+  "item.zurrudium_mod.zurrudium_pickaxe": "Zurrudium Pickaxe",
+  "item.zurrudium_mod.zurrudium_raw": "Zurrudium Chunk",
+  "item.zurrudium_mod.zurrudium_shovel": "Zurrudium Shovel",
+  "item.zurrudium_mod.zurrudium_sword": "Zurrudium Sword",
+  "itemGroup.zurrudium_mod": "Tutorial Mod"
+}

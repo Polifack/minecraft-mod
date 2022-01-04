@@ -1,4 +1,4 @@
-# Minecraft Mod
+# Zurrudium Mod
 
 Development of a minecraft mod to learn the forge API and internal workings of minecraft
 
@@ -15,14 +15,14 @@ Development of a minecraft mod to learn the forge API and internal workings of m
 
 ## Mod Contents
 
-- Created a new Mineral Vein Ore
-- Created a Mineral Chunk that drops from that vein
-- Created a Mineral Ingot got from melting the chunk or the vein (if mined with silk touch)
-- Created tools and armor from the Mineral Ingot
-- Added world generation features for the Mineral Ingot
+- Created a new Zurrudium Vein Ore
+- Created a Zurrudium Chunk that drops from that vein
+- Created a Zurrudium Ingot got from melting the chunk or the vein (if mined with silk touch)
+- Created Zurrudium tools and armor
+- Added world generation features for Zurrudium Ore
 - Added custom weapons such as:
   - Poison Dagger: Poisons enemies on contact
-  - Lightning Hammer: Summons a lighning on contact
+  - Lightning Hammer: Summons a lighting on contact
 
 ## License
 [GPL-3](https://www.gnu.org/licenses/gpl-3.0.en.html)

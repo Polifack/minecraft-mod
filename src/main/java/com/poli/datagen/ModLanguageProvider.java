@@ -1,11 +1,10 @@
 package com.poli.datagen;
 
-import com.poli.setup.Register;
-import com.poli.tutorialmod.TutorialMod;
+import com.poli.main.ZurrudiumMod;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
 
-import static com.poli.blocks.ModBlocks.MOD_ORE_VEIN;
+import static com.poli.blocks.ModBlocks.ZURRUDIUM_ORE;
 import static com.poli.items.ModItems.*;
 import static com.poli.setup.ModSetup.TAB_NAME;
 
@@ -14,7 +13,7 @@ public class ModLanguageProvider extends LanguageProvider {
     String locale = "";
 
     public ModLanguageProvider(DataGenerator gen, String loc){
-        super(gen, TutorialMod.MODID, loc);
+        super(gen, ZurrudiumMod.MODID, loc);
         this.locale=loc;
     }
 
@@ -25,37 +24,37 @@ public class ModLanguageProvider extends LanguageProvider {
         // Adds the translations for the locale defined
 
         if (this.locale.equals("en_us")){
-            add(MOD_ORE_VEIN.get(),    "Mod Ore");
-            add(MOD_ORE_INGOT.get(),   "Mod Ore Ingot");
-            add(MOD_ORE_CHUNK.get(),   "Mod Ore Chunk");
-            add(MOD_ORE_SWORD.get(),   "Mod Ore Sword");
-            add(MOD_ORE_AXE.get(),     "Mod Ore Axe");
-            add(MOD_ORE_SHOVEL.get(),  "Mod Ore Shovel");
-            add(MOD_ORE_PICKAXE.get(), "Mod Ore Pickaxe");
-            add(MOD_ORE_HOE.get(),     "Mod Ore Hoe");
-            add(MOD_ORE_HELMET.get(), "Mod Ore Helmet");
-            add(MOD_ORE_CHESTPLATE.get(), "Mod Ore Chestplate");
-            add(MOD_ORE_LEGGINGS.get(), "Mod Ore Leggings");
-            add(MOD_ORE_BOOTS.get(), "Mod Ore Boots");
-            add(MOD_POISON_DAGGER.get(), "Poisonous Dagger");
-            add(MOD_LIGHTNING_HAMMER.get(), "Lightning Hammer");
+            add(ZURRUDIUM_ORE.get(),    "Zurrudium Ore");
+            add(ZURRUDIUM_INGOT.get(),   "Zurrudium Ingot");
+            add(ZURRUDIUM_RAW.get(),   "Zurrudium Chunk");
+            add(ZURRUDIUM_SWORD.get(),   "Zurrudium Sword");
+            add(ZURRUDIUM_AXE.get(),     "Zurrudium Axe");
+            add(ZURRUDIUM_SHOVEL.get(),  "Zurrudium Shovel");
+            add(ZURRUDIUM_PICKAXE.get(), "Zurrudium Pickaxe");
+            add(ZURRUDIUM_HOE.get(),     "Zurrudium Hoe");
+            add(ZURRUDIUM_HELMET.get(), "Zurrudium Helmet");
+            add(ZURRUDIUM_CHESTPLATE.get(), "Zurrudium Chestplate");
+            add(ZURRUDIUM_LEGGINGS.get(), "Zurrudium Leggings");
+            add(ZURRUDIUM_BOOTS.get(), "Zurrudium Boots");
+            add(POISON_DAGGER.get(), "Poisonous Dagger");
+            add(LIGHTNING_HAMMER.get(), "Lightning Hammer");
         }
 
         if (this.locale.equals("es_es")){
-            add(MOD_ORE_VEIN.get(),    "Mineral del Mod");
-            add(MOD_ORE_INGOT.get(),   "Lingote de Mineral del Mod");
-            add(MOD_ORE_CHUNK.get(),   "Trozo del Mineral del Mod");
-            add(MOD_ORE_SWORD.get(),   "Espada del Mineral del Mod");
-            add(MOD_ORE_AXE.get(),     "Hacha del Mineral del Mod");
-            add(MOD_ORE_SHOVEL.get(),  "Pala del Mineral del Mod");
-            add(MOD_ORE_PICKAXE.get(), "Pico del Mineral del Mod");
-            add(MOD_ORE_HOE.get(),     "Azada del Mineral del Mod");
-            add(MOD_ORE_HELMET.get(), "Casco del Mineral del Mod");
-            add(MOD_ORE_CHESTPLATE.get(), "Pechera del Mineral del Mod");
-            add(MOD_ORE_LEGGINGS.get(), "Pantalones del Mineral del Mod");
-            add(MOD_ORE_BOOTS.get(), "Botas del Mineral del Mod");
-            add(MOD_POISON_DAGGER.get(), "Daga venenosa");
-            add(MOD_LIGHTNING_HAMMER.get(), "Martillo del Rayo");
+            add(ZURRUDIUM_ORE.get(),    "Mena de Zurrudium");
+            add(ZURRUDIUM_INGOT.get(),   "Lingote de Zurrudium");
+            add(ZURRUDIUM_RAW.get(),   "Zurrudium en bruto");
+            add(ZURRUDIUM_SWORD.get(),   "Espada de Zurrudium");
+            add(ZURRUDIUM_AXE.get(),     "Hacha de Zurrudium");
+            add(ZURRUDIUM_SHOVEL.get(),  "Pala de Zurrudium");
+            add(ZURRUDIUM_PICKAXE.get(), "Pico de Zurrudium");
+            add(ZURRUDIUM_HOE.get(),     "Azada de Zurrudium");
+            add(ZURRUDIUM_HELMET.get(), "Casco de Zurrudium");
+            add(ZURRUDIUM_CHESTPLATE.get(), "Pechera de Zurrudium");
+            add(ZURRUDIUM_LEGGINGS.get(), "Pantalones de Zurrudium");
+            add(ZURRUDIUM_BOOTS.get(), "Botas de Zurrudium");
+            add(POISON_DAGGER.get(), "Daga venenosa");
+            add(LIGHTNING_HAMMER.get(), "Martillo del Rayo");
         }
 
 

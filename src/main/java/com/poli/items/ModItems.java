@@ -1,5 +1,6 @@
 package com.poli.items;
 
+import com.poli.blocks.ModBlocks;
 import com.poli.items.custom.ModDaggerItem;
 import com.poli.items.custom.ModHammerItem;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -9,11 +10,10 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import static com.poli.blocks.ModBlocks.MOD_ORE_VEIN;
-import static com.poli.items.ModArmorMaterials.MOD_ORE_ARMOR_MATERIAL;
+import static com.poli.items.ModArmorMaterials.ZURRUDIUM_ARMOR_MATERIAL;
 import static com.poli.items.ModItemsProperties.ITEM_PROPERTIES;
-import static com.poli.items.ModItemsTiers.ORE_MOD_TIER;
-import static com.poli.tutorialmod.TutorialMod.MODID;
+import static com.poli.items.ModItemsTiers.ZURRUDIUM_TIER;
+import static com.poli.main.ZurrudiumMod.MODID;
 
 public class ModItems {
     // Auxiliar function to get items from blocks
@@ -24,54 +24,56 @@ public class ModItems {
     // Initialization of the Deferred Register
     public static final DeferredRegister<Item> DR_ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
 
+    ////////////////////////////////////////////////////
+
     // Items
-    public static final RegistryObject<Item> MOD_ORE_CHUNK =
-            DR_ITEMS.register("mod_ore_chunk", ()->new Item(ITEM_PROPERTIES));
-    public static final RegistryObject<Item> MOD_ORE_INGOT =
-            DR_ITEMS.register("mod_ore_ingot", ()->new Item(ITEM_PROPERTIES));
-    public static final RegistryObject<Item> MOD_ORE_VEIN_ITEM = fromBlock(MOD_ORE_VEIN);
+    public static final RegistryObject<Item> ZURRUDIUM_RAW =
+            DR_ITEMS.register("zurrudium_raw", ()->new Item(ITEM_PROPERTIES));
+    public static final RegistryObject<Item> ZURRUDIUM_INGOT =
+            DR_ITEMS.register("zurrudium_ingot", ()->new Item(ITEM_PROPERTIES));
+    public static final RegistryObject<Item> ZURRUDIUM_ORE = fromBlock(ModBlocks.ZURRUDIUM_ORE);
 
     // Tools
-    public static final RegistryObject<Item> MOD_ORE_SWORD =
-            DR_ITEMS.register("mod_ore_sword",
-                    ()->new SwordItem(ORE_MOD_TIER, 3,-2.4f, (ITEM_PROPERTIES)));
+    public static final RegistryObject<Item> ZURRUDIUM_SWORD =
+            DR_ITEMS.register("zurrudium_sword",
+                    ()->new SwordItem(ZURRUDIUM_TIER, 3,-2.4f, (ITEM_PROPERTIES)));
 
-    public static final RegistryObject<Item> MOD_ORE_AXE =
-            DR_ITEMS.register("mod_ore_axe",
-                    ()->new AxeItem(ORE_MOD_TIER, 5,-3f, (ITEM_PROPERTIES)));
+    public static final RegistryObject<Item> ZURRUDIUM_AXE =
+            DR_ITEMS.register("zurrudium_axe",
+                    ()->new AxeItem(ZURRUDIUM_TIER, 5,-3f, (ITEM_PROPERTIES)));
 
-    public static final RegistryObject<Item> MOD_ORE_SHOVEL =
-            DR_ITEMS.register("mod_ore_shovel",
-                    ()->new ShovelItem(ORE_MOD_TIER, 1.5f,-3f, (ITEM_PROPERTIES)));
+    public static final RegistryObject<Item> ZURRUDIUM_SHOVEL =
+            DR_ITEMS.register("zurrudium_shovel",
+                    ()->new ShovelItem(ZURRUDIUM_TIER, 1.5f,-3f, (ITEM_PROPERTIES)));
 
-    public static final RegistryObject<Item> MOD_ORE_PICKAXE =
-            DR_ITEMS.register("mod_ore_pickaxe",
-                    ()->new PickaxeItem(ORE_MOD_TIER, 1,-2.8f, (ITEM_PROPERTIES)));
+    public static final RegistryObject<Item> ZURRUDIUM_PICKAXE =
+            DR_ITEMS.register("zurrudium_pickaxe",
+                    ()->new PickaxeItem(ZURRUDIUM_TIER, 1,-2.8f, (ITEM_PROPERTIES)));
 
-    public static final RegistryObject<Item> MOD_ORE_HOE =
-            DR_ITEMS.register("mod_ore_hoe",
-                    ()->new HoeItem(ORE_MOD_TIER, -3,0f, (ITEM_PROPERTIES)));
+    public static final RegistryObject<Item> ZURRUDIUM_HOE =
+            DR_ITEMS.register("zurrudium_hoe",
+                    ()->new HoeItem(ZURRUDIUM_TIER, -3,0f, (ITEM_PROPERTIES)));
 
     // Armor
-    public static final RegistryObject<Item> MOD_ORE_HELMET =
-            DR_ITEMS.register("mod_ore_helmet",
-                    ()->new ArmorItem(MOD_ORE_ARMOR_MATERIAL, EquipmentSlot.HEAD, ITEM_PROPERTIES));
-    public static final RegistryObject<Item> MOD_ORE_LEGGINGS =
-            DR_ITEMS.register("mod_ore_leggings",
-                    ()->new ArmorItem(MOD_ORE_ARMOR_MATERIAL, EquipmentSlot.LEGS, ITEM_PROPERTIES));
-    public static final RegistryObject<Item> MOD_ORE_CHESTPLATE =
-            DR_ITEMS.register("mod_ore_chestplate",
-                    ()->new ArmorItem(MOD_ORE_ARMOR_MATERIAL, EquipmentSlot.CHEST, ITEM_PROPERTIES));
-    public static final RegistryObject<Item> MOD_ORE_BOOTS =
-            DR_ITEMS.register("mod_ore_boots",
-                    ()->new ArmorItem(MOD_ORE_ARMOR_MATERIAL, EquipmentSlot.FEET, ITEM_PROPERTIES));
+    public static final RegistryObject<Item> ZURRUDIUM_HELMET =
+            DR_ITEMS.register("zurrudium_helmet",
+                    ()->new ArmorItem(ZURRUDIUM_ARMOR_MATERIAL, EquipmentSlot.HEAD, ITEM_PROPERTIES));
+    public static final RegistryObject<Item> ZURRUDIUM_LEGGINGS =
+            DR_ITEMS.register("zurrudium_leggings",
+                    ()->new ArmorItem(ZURRUDIUM_ARMOR_MATERIAL, EquipmentSlot.LEGS, ITEM_PROPERTIES));
+    public static final RegistryObject<Item> ZURRUDIUM_CHESTPLATE =
+            DR_ITEMS.register("zurrudium_chestplate",
+                    ()->new ArmorItem(ZURRUDIUM_ARMOR_MATERIAL, EquipmentSlot.CHEST, ITEM_PROPERTIES));
+    public static final RegistryObject<Item> ZURRUDIUM_BOOTS =
+            DR_ITEMS.register("zurrudium_boots",
+                    ()->new ArmorItem(ZURRUDIUM_ARMOR_MATERIAL, EquipmentSlot.FEET, ITEM_PROPERTIES));
 
     // Custom tools
-    public static final RegistryObject<Item> MOD_POISON_DAGGER =
-            DR_ITEMS.register("mod_poison_dagger",
-                    ()->new ModDaggerItem(ORE_MOD_TIER, -3,4, (ITEM_PROPERTIES)));
+    public static final RegistryObject<Item> POISON_DAGGER =
+            DR_ITEMS.register("poison_dagger",
+                    ()->new ModDaggerItem(ZURRUDIUM_TIER, -3,4, (ITEM_PROPERTIES)));
 
-    public static final RegistryObject<Item> MOD_LIGHTNING_HAMMER =
-            DR_ITEMS.register("mod_lightning_hammer",
-                    ()->new ModHammerItem(ORE_MOD_TIER, 2, -3,ITEM_PROPERTIES));
+    public static final RegistryObject<Item> LIGHTNING_HAMMER =
+            DR_ITEMS.register("lightning_hammer",
+                    ()->new ModHammerItem(ZURRUDIUM_TIER, 2, -3,ITEM_PROPERTIES));
 }

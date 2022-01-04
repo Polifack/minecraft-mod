@@ -13,13 +13,13 @@
       "item": "minecraft:spider_eye"
     },
     "i": {
-      "item": "tutorialmod:mod_ore_ingot"
+      "item": "zurrudium_mod:zurrudium_ingot"
     },
     "s": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "tutorialmod:mod_poison_dagger"
+    "item": "zurrudium_mod:poison_dagger"
   }
 }

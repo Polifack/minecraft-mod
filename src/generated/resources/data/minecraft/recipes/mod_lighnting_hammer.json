@@ -10,13 +10,13 @@
       "item": "minecraft:iron_ingot"
     },
     "i": {
-      "item": "tutorialmod:mod_ore_ingot"
+      "item": "zurrudium_mod:zurrudium_ingot"
     },
     "s": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "tutorialmod:mod_lightning_hammer"
+    "item": "zurrudium_mod:lightning_hammer"
   }
 }

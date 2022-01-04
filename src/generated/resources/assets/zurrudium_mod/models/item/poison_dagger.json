@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "zurrudium_mod:item/custom/poison_dagger"
+  }
+}

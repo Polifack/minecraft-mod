@@ -5,9 +5,9 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
 
-import static com.poli.tutorialmod.TutorialMod.MODID;
+import static com.poli.main.ZurrudiumMod.MODID;
 
 public class ModBlocksTags {
-    public static final Tags.IOptionalNamedTag<Block> MOD_ORE =
-            BlockTags.createOptional(new ResourceLocation(MODID,"mod_ore"));
+    public static final Tags.IOptionalNamedTag<Block> ZURRUDIUM_ORE =
+            BlockTags.createOptional(new ResourceLocation(MODID,"zurrudium_ore"));
 }

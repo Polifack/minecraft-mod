@@ -1,12 +1,12 @@
 package com.poli.datagen;
 
-import com.poli.tutorialmod.TutorialMod;
+import com.poli.main.ZurrudiumMod;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
-@Mod.EventBusSubscriber(modid = TutorialMod.MODID, bus=Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(modid = ZurrudiumMod.MODID, bus=Mod.EventBusSubscriber.Bus.MOD)
 public class DataGenerators {
 
     // Subscribe to the data gathering event. This event is triggered on load so

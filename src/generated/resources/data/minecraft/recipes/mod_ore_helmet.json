@@ -7,10 +7,10 @@
   ],
   "key": {
     "x": {
-      "item": "tutorialmod:mod_ore_ingot"
+      "item": "zurrudium_mod:zurrudium_ingot"
     }
   },
   "result": {
-    "item": "tutorialmod:mod_ore_helmet"
+    "item": "zurrudium_mod:zurrudium_helmet"
   }
 }

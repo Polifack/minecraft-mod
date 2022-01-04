@@ -9,17 +9,17 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import org.jetbrains.annotations.NotNull;
 
-import static com.poli.items.ModItems.MOD_ORE_INGOT;
+import static com.poli.items.ModItems.ZURRUDIUM_INGOT;
 
 public class ModSetup {
 
     // Creative mode tab wherever our mod items will be shown
-    public static final String TAB_NAME = "mod_tutorial";
+    public static final String TAB_NAME = "zurrudium_mod";
 
     public static final CreativeModeTab ITEM_GROUP = new CreativeModeTab(TAB_NAME) {
         @Override
         public @NotNull ItemStack makeIcon() {
-            return new ItemStack(MOD_ORE_INGOT.get());
+            return new ItemStack(ZURRUDIUM_INGOT.get());
         }
     };
 
