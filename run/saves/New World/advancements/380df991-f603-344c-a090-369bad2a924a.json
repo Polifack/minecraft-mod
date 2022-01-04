@@ -11,6 +11,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/iron_nugget_from_blasting": {
+    "criteria": {
+      "has_iron_sword": "2022-01-03 21:25:44 +0100"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/stone_brick_stairs_from_stone_stonecutting": {
     "criteria": {
       "has_stone": "2022-01-03 20:36:15 +0100"
@@ -71,6 +77,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/iron_nugget_from_smelting": {
+    "criteria": {
+      "has_iron_sword": "2022-01-03 21:25:44 +0100"
+    },
+    "done": true
+  },
   "minecraft:recipes/mod_tutorial/mod_ore_ingot_from_vein": {
     "criteria": {
       "has_ore": "2022-01-03 20:37:43 +0100"
@@ -120,7 +132,19 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2022-01-04 13:49:05 +0100"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/stone_slab_from_stone_stonecutting": {
+    "criteria": {
+      "has_stone": "2022-01-03 20:36:15 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/chiseled_stone_bricks_stone_from_stonecutting": {
     "criteria": {
       "has_stone": "2022-01-03 20:36:15 +0100"
     },
@@ -129,12 +153,6 @@
   "minecraft:recipes/mod_tutorial/mod_ore_helmet": {
     "criteria": {
       "has_ore": "2022-01-03 20:37:36 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/chiseled_stone_bricks_stone_from_stonecutting": {
-    "criteria": {
-      "has_stone": "2022-01-03 20:36:15 +0100"
     },
     "done": true
   },

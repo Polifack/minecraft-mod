@@ -33,15 +33,17 @@ public class ModItemModels extends ItemModelProvider {
         // withExistingParent(MOD_ORE_HELMET.get().getRegistryName().getPath(),modLoc("models/armor"));
 
         // Set textures for tools
-        singleTexture(MOD_ORE_SWORD.get().getRegistryName().getPath(), mcLoc("item/generated"),
+        // For tools we dont use item/generated, we use item/handheld
+        // When doubts check minecraft implementation in https://mcasset.cloud/1.18.1/assets/minecraft/models/item
+        singleTexture(MOD_ORE_SWORD.get().getRegistryName().getPath(), mcLoc("item/handheld"),
                 "layer0",modLoc("item/mod_ore_sword"));
-        singleTexture(MOD_ORE_PICKAXE.get().getRegistryName().getPath(), mcLoc("item/generated"),
+        singleTexture(MOD_ORE_PICKAXE.get().getRegistryName().getPath(), mcLoc("item/handheld"),
                 "layer0",modLoc("item/mod_ore_pickaxe"));
-        singleTexture(MOD_ORE_SHOVEL.get().getRegistryName().getPath(), mcLoc("item/generated"),
+        singleTexture(MOD_ORE_SHOVEL.get().getRegistryName().getPath(), mcLoc("item/handheld"),
                 "layer0",modLoc("item/mod_ore_shovel"));
-        singleTexture(MOD_ORE_HOE.get().getRegistryName().getPath(), mcLoc("item/generated"),
+        singleTexture(MOD_ORE_HOE.get().getRegistryName().getPath(), mcLoc("item/handheld"),
                 "layer0",modLoc("item/mod_ore_hoe"));
-        singleTexture(MOD_ORE_AXE.get().getRegistryName().getPath(), mcLoc("item/generated"),
+        singleTexture(MOD_ORE_AXE.get().getRegistryName().getPath(), mcLoc("item/handheld"),
                 "layer0",modLoc("item/mod_ore_axe"));
 
         // set textures for armor items
