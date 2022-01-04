@@ -1,5 +1,7 @@
 package com.poli.items;
 
+import com.poli.items.custom.ModDaggerItem;
+import com.poli.items.custom.ModHammerItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
@@ -63,4 +65,13 @@ public class ModItems {
     public static final RegistryObject<Item> MOD_ORE_BOOTS =
             DR_ITEMS.register("mod_ore_boots",
                     ()->new ArmorItem(MOD_ORE_ARMOR_MATERIAL, EquipmentSlot.FEET, ITEM_PROPERTIES));
+
+    // Custom tools
+    public static final RegistryObject<Item> MOD_POISON_DAGGER =
+            DR_ITEMS.register("mod_poison_dagger",
+                    ()->new ModDaggerItem(ORE_MOD_TIER, -3,4, (ITEM_PROPERTIES)));
+
+    public static final RegistryObject<Item> MOD_LIGHTNING_HAMMER =
+            DR_ITEMS.register("mod_lightning_hammer",
+                    ()->new ModHammerItem(ORE_MOD_TIER, 2, -3,ITEM_PROPERTIES));
 }

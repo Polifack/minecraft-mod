@@ -70,6 +70,10 @@
     item.atk_speed = item.atk_speed + base.atk_speed
     XXXItem(tier, attack_mod, speed_mod, properties)
 
+-> Custom weapons
+    Must extend SwordItemClass
+    In order to apply different effects during damage calculation must override hurtEnemy(stack, targ, atk) function
+
 -> Armor
     ModArmorMaterialBase(enchantability, duration[], defense[], knockback_res, toughness, name, sound, rep_ingr)
     defense = the number of armor shields

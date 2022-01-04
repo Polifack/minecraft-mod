@@ -1,6 +1,5 @@
 package com.poli.datagen;
 
-import com.poli.setup.Register;
 import com.poli.tutorialmod.TutorialMod;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
@@ -56,5 +55,10 @@ public class ModItemModels extends ItemModelProvider {
         singleTexture(MOD_ORE_BOOTS.get().getRegistryName().getPath(), mcLoc("item/generated"),
                 "layer0",modLoc("item/mod_ore_boots"));
 
+        // custom item
+        singleTexture(MOD_POISON_DAGGER.get().getRegistryName().getPath(), mcLoc("item/handheld"),
+                "layer0", modLoc("item/mod_poison_dagger"));
+        singleTexture(MOD_LIGHTNING_HAMMER.get().getRegistryName().getPath(), mcLoc("item/handheld"),
+                "layer0", modLoc("item/mod_lightning_hammer"));
     }
 }

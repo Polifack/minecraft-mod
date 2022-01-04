@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " x ",
+    "exi",
+    " s "
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:iron_nugget"
+    },
+    "e": {
+      "item": "minecraft:spider_eye"
+    },
+    "i": {
+      "item": "tutorialmod:mod_ore_ingot"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "tutorialmod:mod_poison_dagger"
+  }
+}

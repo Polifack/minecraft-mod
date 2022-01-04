@@ -1,5 +1,6 @@
 {
   "block.tutorialmod.mod_ore_vein": "Mod Ore",
+  "item.tutorialmod.mod_lightning_hammer": "Lightning Hammer",
   "item.tutorialmod.mod_ore_axe": "Mod Ore Axe",
   "item.tutorialmod.mod_ore_boots": "Mod Ore Boots",
   "item.tutorialmod.mod_ore_chestplate": "Mod Ore Chestplate",
@@ -11,5 +12,6 @@
   "item.tutorialmod.mod_ore_pickaxe": "Mod Ore Pickaxe",
   "item.tutorialmod.mod_ore_shovel": "Mod Ore Shovel",
   "item.tutorialmod.mod_ore_sword": "Mod Ore Sword",
+  "item.tutorialmod.mod_poison_dagger": "Poisonous Dagger",
   "itemGroup.mod_tutorial": "Tutorial Mod"
 }

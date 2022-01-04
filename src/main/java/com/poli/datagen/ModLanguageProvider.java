@@ -37,6 +37,8 @@ public class ModLanguageProvider extends LanguageProvider {
             add(MOD_ORE_CHESTPLATE.get(), "Mod Ore Chestplate");
             add(MOD_ORE_LEGGINGS.get(), "Mod Ore Leggings");
             add(MOD_ORE_BOOTS.get(), "Mod Ore Boots");
+            add(MOD_POISON_DAGGER.get(), "Poisonous Dagger");
+            add(MOD_LIGHTNING_HAMMER.get(), "Lightning Hammer");
         }
 
         if (this.locale.equals("es_es")){
@@ -52,6 +54,8 @@ public class ModLanguageProvider extends LanguageProvider {
             add(MOD_ORE_CHESTPLATE.get(), "Pechera del Mineral del Mod");
             add(MOD_ORE_LEGGINGS.get(), "Pantalones del Mineral del Mod");
             add(MOD_ORE_BOOTS.get(), "Botas del Mineral del Mod");
+            add(MOD_POISON_DAGGER.get(), "Daga venenosa");
+            add(MOD_LIGHTNING_HAMMER.get(), "Martillo del Rayo");
         }
 
 

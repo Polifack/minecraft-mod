@@ -18,6 +18,9 @@ Development of a minecraft mod to learn the forge API and internal workings of m
 - Created a Mineral Ingot got from melting the chunk or the vein (if mined with silk touch)
 - Created tools and armor from the Mineral Ingot
 - Added world generation features for the Mineral Ingot
+- Added custom weapons such as:
+  - Poison Dagger: Poisons enemies on contact
+  - Lightning Hammer: Summons a lighning on contact
 
 ## License
 [GPL-3](https://www.gnu.org/licenses/gpl-3.0.en.html)

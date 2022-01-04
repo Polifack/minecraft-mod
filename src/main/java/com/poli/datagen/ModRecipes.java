@@ -1,6 +1,5 @@
 package com.poli.datagen;
 
-import com.poli.setup.Register;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
@@ -128,6 +127,27 @@ public class ModRecipes extends RecipeProvider {
                 .define('x', MOD_ORE_INGOT.get())
                 .unlockedBy("has_ore",has(MOD_ORE_INGOT.get()))
                 .save(consumer, "mod_ore_boots");
+        ShapedRecipeBuilder.shaped(MOD_POISON_DAGGER.get())
+                .pattern(" x ")
+                .pattern("exi")
+                .pattern(" s ")
+                .define('x',Items.IRON_NUGGET)
+                .define('e',Items.SPIDER_EYE)
+                .define('i', MOD_ORE_INGOT.get())
+                .define('s', Items.STICK)
+                .unlockedBy("has_ore", has(MOD_ORE_INGOT.get()))
+                .unlockedBy("has_eye",has(Items.SPIDER_EYE))
+                .unlockedBy("has_nugget", has(Items.IRON_NUGGET))
+                .save(consumer, "mod_poison_dagger");
+        ShapedRecipeBuilder.shaped(MOD_LIGHTNING_HAMMER.get())
+                .pattern("ixi")
+                .pattern("ixi")
+                .pattern(" s ")
+                .define('x',Items.IRON_INGOT)
+                .define('i', MOD_ORE_INGOT.get())
+                .define('s', Items.STICK)
+                .unlockedBy("has_ore", has(MOD_ORE_INGOT.get()))
+                .save(consumer, "mod_lighnting_hammer");
 
 
     }
