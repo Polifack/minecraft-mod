@@ -10,8 +10,8 @@ Development of a minecraft mod to learn the forge API and internal workings of m
 
 
 ![minerals_screenshot](https://github.com/Polifack/minecraft-mod/blob/main/showcase_files/minerals.png)
-![dagger_gif](https://github.com/Polifack/minecraft-mod/blob/main/dagger.gif)
-![hammer_gif](https://github.com/Polifack/minecraft-mod/blob/main/hammer.gif)
+![dagger_gif](https://github.com/Polifack/minecraft-mod/blob/main/showcase_files/dagger.gif)
+![hammer_gif](https://github.com/Polifack/minecraft-mod/blob/main/showcase_files/hammer.gif)
 
 ## Mod Contents
 
