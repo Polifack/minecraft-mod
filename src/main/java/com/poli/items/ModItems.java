@@ -6,10 +6,12 @@ import com.poli.items.custom.ModHammerItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import static com.poli.entity.ModEntityType.ZURRUDIUM_ZOMBIE;
 import static com.poli.items.ModArmorMaterials.ZURRUDIUM_ARMOR_MATERIAL;
 import static com.poli.items.ModItemsProperties.ITEM_PROPERTIES;
 import static com.poli.items.ModItemsTiers.ZURRUDIUM_TIER;
@@ -76,4 +78,9 @@ public class ModItems {
     public static final RegistryObject<Item> LIGHTNING_HAMMER =
             DR_ITEMS.register("lightning_hammer",
                     ()->new ModHammerItem(ZURRUDIUM_TIER, 2, -3,ITEM_PROPERTIES));
+
+    // Spawn eggs
+    public static final RegistryObject<Item> ZURRUDIUM_ZOMBIE_SPAWN=
+            DR_ITEMS.register("zurrudium_zombie_spawn",
+                    ()->new ForgeSpawnEggItem(ZURRUDIUM_ZOMBIE,0xff0000, 0x00ffaa, ITEM_PROPERTIES));
 }

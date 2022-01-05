@@ -1,5 +1,6 @@
 {
   "block.zurrudium_mod.zurrudium_ore": "Zurrudium Ore",
+  "entity.zurrudium_mod.zurrudium_zombie": "Zurrudium Zombie",
   "item.zurrudium_mod.lightning_hammer": "Lightning Hammer",
   "item.zurrudium_mod.poison_dagger": "Poisonous Dagger",
   "item.zurrudium_mod.zurrudium_axe": "Zurrudium Axe",
@@ -13,5 +14,6 @@
   "item.zurrudium_mod.zurrudium_raw": "Zurrudium Chunk",
   "item.zurrudium_mod.zurrudium_shovel": "Zurrudium Shovel",
   "item.zurrudium_mod.zurrudium_sword": "Zurrudium Sword",
+  "item.zurrudium_mod.zurrudium_zombie_spawn": "Spawn Zurrudium Zombie",
   "itemGroup.zurrudium_mod": "Tutorial Mod"
 }

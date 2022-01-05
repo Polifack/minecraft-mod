@@ -23,6 +23,7 @@ public class ModItemTags extends ItemTagsProvider {
         tag(Tags.Items.INGOTS)
                 .add(ZURRUDIUM_INGOT.get());
 
+
         // Also, register them with a custom tag
         tag(ZURRUDIUM_ITEM)
                 .add(ZURRUDIUM_ORE.get())
@@ -32,7 +33,8 @@ public class ModItemTags extends ItemTagsProvider {
                 .add(ZURRUDIUM_SHOVEL.get())
                 .add(ZURRUDIUM_HOE.get())
                 .add(ZURRUDIUM_PICKAXE.get())
-                .add(ZURRUDIUM_HELMET.get());
+                .add(ZURRUDIUM_HELMET.get())
+                .add(ZURRUDIUM_ZOMBIE_SPAWN.get());
     }
     @Override
     public @NotNull String getName(){return "Tutorial Mod Tags";}

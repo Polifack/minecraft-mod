@@ -1,5 +1,5 @@
 b12efd6a0f0a2a4b927e17180d9dc43a82ca36e2 assets/zurrudium_mod/blockstates/zurrudium_ore.json
-73fb29c1bd62df908887b826117bc500fd9f18af assets/zurrudium_mod/lang/en_us.json
+1a8412775751f0bcca3374ade34df87762285f0b assets/zurrudium_mod/lang/en_us.json
 bb51138fd4976f8498448b4f455a29716c350390 assets/zurrudium_mod/models/block/zurrudium_ore.json
 3d7f1cdff1f61a0be4e3b1169454bcf620cf5344 assets/zurrudium_mod/models/item/lightning_hammer.json
 4964b329210ec9316613f620d54974c428ad1816 assets/zurrudium_mod/models/item/poison_dagger.json
@@ -15,6 +15,7 @@ de2c6ff2cc8e3036bbf68b75bfe95386dfcc3f41 assets/zurrudium_mod/models/item/zurrud
 1013936297489041e43c8ff8dd1aa8767dc426e7 assets/zurrudium_mod/models/item/zurrudium_raw.json
 9006483f3489046db35e7fc660858f7e925d48a3 assets/zurrudium_mod/models/item/zurrudium_shovel.json
 95bca85a71b7742b1597e33976f8f416aa5a737e assets/zurrudium_mod/models/item/zurrudium_sword.json
+98167609bf3898587f7565736a6fc24a7966cacd assets/zurrudium_mod/models/item/zurrudium_zombie_spawn.json
 3dc44a53749f77affa41462610818b85193192ea data/forge/tags/blocks/ores.json
 6b3239f4706313c8d6e55915e337198ebb158d68 data/forge/tags/items/ingots.json
 3dc44a53749f77affa41462610818b85193192ea data/forge/tags/items/ores.json
@@ -52,4 +53,4 @@ f68e5b3445c6e7704dffa6e2dd801891fbceace0 data/minecraft/recipes/mod_ore_sword.js
 3dc44a53749f77affa41462610818b85193192ea data/minecraft/tags/blocks/needs_iron_tool.json
 77107c252f50e7936324aea0734cad7631d49bce data/zurrudium_mod/loot_tables/blocks/zurrudium_ore.json
 3dc44a53749f77affa41462610818b85193192ea data/zurrudium_mod/tags/blocks/zurrudium_ore.json
-90adeb3475e1cac0d745744245a9ee08b4a1f72b data/zurrudium_mod/tags/items/zurrudium.json
+6632e0c797c13f8ac16790106f205e3712e839fd data/zurrudium_mod/tags/items/zurrudium.json

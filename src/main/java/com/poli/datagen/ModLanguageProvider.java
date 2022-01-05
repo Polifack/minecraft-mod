@@ -5,6 +5,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
 
 import static com.poli.blocks.ModBlocks.ZURRUDIUM_ORE;
+import static com.poli.entity.ModEntityType.ZURRUDIUM_ZOMBIE;
 import static com.poli.items.ModItems.*;
 import static com.poli.setup.ModSetup.TAB_NAME;
 
@@ -38,6 +39,8 @@ public class ModLanguageProvider extends LanguageProvider {
             add(ZURRUDIUM_BOOTS.get(), "Zurrudium Boots");
             add(POISON_DAGGER.get(), "Poisonous Dagger");
             add(LIGHTNING_HAMMER.get(), "Lightning Hammer");
+            add(ZURRUDIUM_ZOMBIE_SPAWN.get(), "Spawn Zurrudium Zombie");
+            add(ZURRUDIUM_ZOMBIE.get(), "Zurrudium Zombie");
         }
 
         if (this.locale.equals("es_es")){
@@ -55,6 +58,8 @@ public class ModLanguageProvider extends LanguageProvider {
             add(ZURRUDIUM_BOOTS.get(), "Botas de Zurrudium");
             add(POISON_DAGGER.get(), "Daga venenosa");
             add(LIGHTNING_HAMMER.get(), "Martillo del Rayo");
+            add(ZURRUDIUM_ZOMBIE_SPAWN.get(), "Generar Zurrudium Zombie");
+            add(ZURRUDIUM_ZOMBIE.get(), "Zurrudium Zombie");
         }
 
 

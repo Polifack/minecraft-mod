@@ -64,6 +64,13 @@
 ## Anotations
 -> To search for a class in intellij use ctrl+n. This is useful to search for minecraft implementations of stuff
 
+-> Create a mob that runs away from the player and turns into a block that he is touching. When he is in block form
+he attacks the player and runs away again to hide.
+
+-> Parametrizable classes
+    class_name<T> means that the Class class_name is parametrizable with parameter T
+    class_name<?> means that the parametrizable class_name allows for ANY parameter
+
 -> Tools
     base = {bonus=1, speed_modifier=4}
     item.bonus = item.bonus + tier.bonus + base.bonus
@@ -126,3 +133,31 @@
         8) In a function that is hooked to the forge FMLCommonSetupEvent event hook our OreGeneration Function
 
             event.enqueueWork(ModOreGeneration::registerOres);
+
+-> How to do Entities, Renders and Models
+
+    https://raw.githubusercontent.com/ZtechNetwork/MCBVanillaResourcePack/master/models/entity/
+
+    1) Create XXXEntityClass in /entity/custom
+
+        This class will implement the attributes, AI, experience and any server-side stuff from the entity
+
+    2) Create XXXModel in /entity/custom/model
+
+        This class will deal with mesh creation and texture mapping
+
+    3) Create XXXRenderer in /entity/custom/renderer
+
+        This class will deal with linking texture and model
+
+    4) Create spawn egg (if wanted!) in /items/ModItems like any other item
+
+    5) In the /setup/clientSetup create a function to hook onto registerLayer and registerRenderer events
+
+    6) In thoose functions make a call to XXXRenderer and XXXModel to make sure they are registered
+
+    7) Create a ModEntityType class in /entity/
+
+        This class will deal with creating the MOBS deferred register and adding elements to it
+
+    8) Link the mobs deferred register into the event bus in the /setup/register class

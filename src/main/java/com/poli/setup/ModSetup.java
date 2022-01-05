@@ -1,16 +1,23 @@
 package com.poli.setup;
 
+import com.poli.entity.custom.ZurrudiumZombieEntity;
 import com.poli.world.ModCustomWorldGeneration;
 import com.poli.world.ModOreGeneration;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import org.jetbrains.annotations.NotNull;
 
+import static com.poli.entity.ModEntityType.ZURRUDIUM_ZOMBIE;
 import static com.poli.items.ModItems.ZURRUDIUM_INGOT;
+import static com.poli.main.ZurrudiumMod.MODID;
 
+@Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModSetup {
 
     // Creative mode tab wherever our mod items will be shown
@@ -29,6 +36,12 @@ public class ModSetup {
 
         // Set the listener for the biome registration to our custom generator
         bus.addListener(ModCustomWorldGeneration::onBiomeLoadingEvent);
+    }
+
+
+    @SubscribeEvent
+    public static void onAttributeCreate(EntityAttributeCreationEvent event){
+        event.put(ZURRUDIUM_ZOMBIE.get(), ZurrudiumZombieEntity.createAttributes().build());
     }
 
     // Function to be called whenever a FMLCommonSetupEvent is detected

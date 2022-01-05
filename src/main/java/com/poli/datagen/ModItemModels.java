@@ -60,5 +60,9 @@ public class ModItemModels extends ItemModelProvider {
                 "layer0", modLoc("item/custom/poison_dagger"));
         singleTexture(LIGHTNING_HAMMER.get().getRegistryName().getPath(), mcLoc("item/handheld"),
                 "layer0", modLoc("item/custom/lightning_hammer"));
+
+        // spawn eggs
+        withExistingParent(ZURRUDIUM_ZOMBIE_SPAWN.get().getRegistryName().getPath(),
+                mcLoc("item/template_spawn_egg"));
     }
 }
