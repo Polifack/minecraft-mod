@@ -25,6 +25,7 @@ public class ModLanguageProvider extends LanguageProvider {
         // Adds the translations for the locale defined
 
         if (this.locale.equals("en_us")){
+            add(QUICKSAND_BLOCK.get(),      "Quicksand");
             add(ZURRUDIUM_ORE.get(),    "Zurrudium Ore");
             add(ZURRUDIUM_INGOT.get(),   "Zurrudium Ingot");
             add(ZURRUDIUM_RAW.get(),   "Zurrudium Chunk");
@@ -44,6 +45,7 @@ public class ModLanguageProvider extends LanguageProvider {
         }
 
         if (this.locale.equals("es_es")){
+            add(QUICKSAND_BLOCK.get(),      "Arena Movediza");
             add(ZURRUDIUM_ORE.get(),    "Mena de Zurrudium");
             add(ZURRUDIUM_INGOT.get(),   "Lingote de Zurrudium");
             add(ZURRUDIUM_RAW.get(),   "Zurrudium en bruto");

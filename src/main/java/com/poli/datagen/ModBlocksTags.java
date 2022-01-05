@@ -8,6 +8,7 @@ import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
 
+import static com.poli.blocks.ModBlocks.QUICKSAND_BLOCK;
 import static com.poli.blocks.ModBlocks.ZURRUDIUM_ORE;
 
 public class ModBlocksTags extends BlockTagsProvider {
@@ -17,13 +18,18 @@ public class ModBlocksTags extends BlockTagsProvider {
     protected void addTags(){
         // Vanilla Minecraft Tagging
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ZURRUDIUM_ORE.get());
-        tag(BlockTags.NEEDS_IRON_TOOL).add(ZURRUDIUM_ORE.get());
+        tag(BlockTags.NEEDS_IRON_TOOL)
+                .add(ZURRUDIUM_ORE.get())
+                .add(QUICKSAND_BLOCK.get());
 
         // Forge Tagging
         tag(Tags.Blocks.ORES).add(ZURRUDIUM_ORE.get());
+        tag(Tags.Blocks.SAND).add(QUICKSAND_BLOCK.get());
 
         // Custom Tagging
-        tag(com.poli.blocks.ModBlocksTags.ZURRUDIUM_ORE).add(ZURRUDIUM_ORE.get());
+        tag(com.poli.blocks.ModBlocksTags.ZURRUDIUM_BLOCKS)
+                .add(ZURRUDIUM_ORE.get())
+                .add(QUICKSAND_BLOCK.get());
     }
 
     @Override

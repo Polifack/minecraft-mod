@@ -1,7 +1,9 @@
 package com.poli.datagen;
 
 import net.minecraft.data.DataGenerator;
+import net.minecraft.world.level.storage.loot.LootTable;
 
+import static com.poli.blocks.ModBlocks.QUICKSAND_BLOCK;
 import static com.poli.blocks.ModBlocks.ZURRUDIUM_ORE;
 import static com.poli.items.ModItems.ZURRUDIUM_RAW;
 
@@ -12,10 +14,8 @@ public class ModLootTable extends BaseLootTableProvider {
 
     @Override
     public void addTables(){
-        // Loot tables allow for a block to drop an item when broken
-        // to register the ore we use an auxiliary function declared in BaseLootTableProvider
-        // that allows us to declare silk touch
         lootTables.put(ZURRUDIUM_ORE.get(), createSilkTouchTable("mod_ore_overworld",
                 ZURRUDIUM_ORE.get(), ZURRUDIUM_RAW.get(), 1, 5));
+        lootTables.put(QUICKSAND_BLOCK.get(), createBasicTable("quicksand_block", QUICKSAND_BLOCK.get()));
     }
 }

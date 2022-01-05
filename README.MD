@@ -8,12 +8,6 @@ Development of a minecraft mod to learn the forge API and internal workings of m
 - Minecraft Version is 1.18.1
 - [ModDevelopmentNotes](https://github.com/Polifack/minecraft-mod/blob/main/instructions.txt)
 
-
-![minerals_screenshot](https://github.com/Polifack/zurrudium-mod/blob/main/showcase_files/minerals.png)
-![dagger_gif](https://github.com/Polifack/zurrudium-mod/blob/main/showcase_files/dagger.gif)
-![hammer_gif](https://github.com/Polifack/zurrudium-mod/blob/main/showcase_files/hammer.gif)
-![zombies_gif](https://github.com/Polifack/zurrudium-mod/blob/main/showcase_files/zombies.gif)
-
 ## Mod Contents
 
 - Created a Zurrudium Ore
@@ -25,6 +19,7 @@ Development of a minecraft mod to learn the forge API and internal workings of m
   - Poison Dagger: Poisons enemies on contact
   - Lightning Hammer: Summons a lighting on contact
 - Added custom mob (a very chonky zombie)
+- Added Quicksand
 
 ## License
 [GPL-3](https://www.gnu.org/licenses/gpl-3.0.en.html)

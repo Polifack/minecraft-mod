@@ -161,3 +161,12 @@ he attacks the player and runs away again to hide.
         This class will deal with creating the MOBS deferred register and adding elements to it
 
     8) Link the mobs deferred register into the event bus in the /setup/register class
+
+
+-> Quicksand
+
+    - Based on snow dust
+    - Can adjust particle effect, movement speed and hitbox
+    - The player cant get out unless mining it because it has 0.9y in hitbox
+    - Prevents fall damage
+    - We can allow some type of mobs to walk on quicksand

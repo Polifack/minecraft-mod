@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "zurrudium_mod:zurrudium_ore",
+    "zurrudium_mod:zurrudium_ingot",
+    "zurrudium_mod:zurrudium_sword",
+    "zurrudium_mod:zurrudium_axe",
+    "zurrudium_mod:zurrudium_shovel",
+    "zurrudium_mod:zurrudium_hoe",
+    "zurrudium_mod:zurrudium_pickaxe",
+    "zurrudium_mod:zurrudium_helmet",
+    "zurrudium_mod:zurrudium_zombie_spawn"
+  ]
+}

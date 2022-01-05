@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "zurrudium_mod:zurrudium_ore"
+    "zurrudium_mod:zurrudium_ore",
+    "zurrudium_mod:quicksand_block"
   ]
 }

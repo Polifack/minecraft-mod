@@ -9,5 +9,5 @@ import static com.poli.main.ZurrudiumMod.MODID;
 
 public class ModItemsTags {
     public static final Tags.IOptionalNamedTag<Item> ZURRUDIUM_ITEM =
-            ItemTags.createOptional(new ResourceLocation(MODID,"zurrudium"));
+            ItemTags.createOptional(new ResourceLocation(MODID,"zurrudium_mod"));
 }

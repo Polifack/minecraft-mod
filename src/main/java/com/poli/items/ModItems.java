@@ -28,12 +28,16 @@ public class ModItems {
 
     ////////////////////////////////////////////////////
 
+    //Blocks
+    public static final RegistryObject<Item> ZURRUDIUM_ORE = fromBlock(ModBlocks.ZURRUDIUM_ORE);
+    public static final RegistryObject<Item> QUICKSAND_BLOCK = fromBlock(ModBlocks.QUICKSAND_BLOCK);
+
+
     // Items
     public static final RegistryObject<Item> ZURRUDIUM_RAW =
             DR_ITEMS.register("zurrudium_raw", ()->new Item(ITEM_PROPERTIES));
     public static final RegistryObject<Item> ZURRUDIUM_INGOT =
             DR_ITEMS.register("zurrudium_ingot", ()->new Item(ITEM_PROPERTIES));
-    public static final RegistryObject<Item> ZURRUDIUM_ORE = fromBlock(ModBlocks.ZURRUDIUM_ORE);
 
     // Tools
     public static final RegistryObject<Item> ZURRUDIUM_SWORD =

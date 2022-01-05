@@ -8,6 +8,6 @@ import net.minecraftforge.common.Tags;
 import static com.poli.main.ZurrudiumMod.MODID;
 
 public class ModBlocksTags {
-    public static final Tags.IOptionalNamedTag<Block> ZURRUDIUM_ORE =
-            BlockTags.createOptional(new ResourceLocation(MODID,"zurrudium_ore"));
+    public static final Tags.IOptionalNamedTag<Block> ZURRUDIUM_BLOCKS =
+            BlockTags.createOptional(new ResourceLocation(MODID,"zurrudium_mod"));
 }
