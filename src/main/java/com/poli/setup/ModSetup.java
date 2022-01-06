@@ -2,6 +2,7 @@ package com.poli.setup;
 
 import com.poli.entity.custom.ZurrudiumZombieEntity;
 import com.poli.world.ModCustomWorldGeneration;
+import com.poli.world.ModEntityGeneration;
 import com.poli.world.ModOreGeneration;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -36,6 +37,7 @@ public class ModSetup {
 
         // Set the listener for the biome registration to our custom generator
         bus.addListener(ModCustomWorldGeneration::onBiomeLoadingEvent);
+        bus.addListener(ModEntityGeneration::onEntitySpawn);
     }
 
 

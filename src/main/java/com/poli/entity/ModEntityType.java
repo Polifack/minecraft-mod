@@ -16,9 +16,12 @@ public class ModEntityType {
             DeferredRegister.create(ForgeRegistries.ENTITIES, MODID);
 
     // Register the entities in the register
+    // .sized(x,y) is the mob hitbox
     public static final RegistryObject<EntityType<ZurrudiumZombieEntity>> ZURRUDIUM_ZOMBIE = DR_ENTITY.register(
-            "zurrudium_zombie", () -> EntityType.Builder.of(ZurrudiumZombieEntity::new, MobCategory.CREATURE)
-            .sized(0.6f, 1.95f)
+            "zurrudium_zombie", () -> EntityType.Builder.of(
+                    ZurrudiumZombieEntity::new,
+                            MobCategory.MONSTER)
+            .sized(1.5f, 2f)
             .clientTrackingRange(8)
             .setShouldReceiveVelocityUpdates(false)
             .build("zurrudium_zombie"));

@@ -1,19 +1,18 @@
 package com.poli.entity.custom;
 
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
-import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
-import net.minecraft.world.entity.animal.IronGolem;
-import net.minecraft.world.entity.animal.Turtle;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.monster.Zombie;
-import net.minecraft.world.entity.monster.ZombifiedPiglin;
-import net.minecraft.world.entity.npc.AbstractVillager;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
+
+import java.util.Random;
 
 public class ZurrudiumZombieEntity extends Zombie {
 
@@ -30,7 +29,6 @@ public class ZurrudiumZombieEntity extends Zombie {
     public ZurrudiumZombieEntity(EntityType<? extends Zombie> entityType, Level levelIn) {
         super(entityType, levelIn);
     }
-
 
     public static AttributeSupplier.Builder prepareAttributes() {
         return Monster.createMonsterAttributes()
@@ -61,5 +59,28 @@ public class ZurrudiumZombieEntity extends Zombie {
     protected void addBehaviourGoals() {
         this.goalSelector.addGoal(2, new ZombieAttackGoal(this, 1.0D, false));
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
+    }
+
+    // disable baby spawning
+    public static boolean getSpawnAsBabyOdds(Random p_34303_) {
+        return false;
+    }
+
+    @Override
+    public boolean canPickUpLoot() {
+        return false;
+    }
+
+    // Override from PathfinderMob
+    @Override
+    public boolean checkSpawnRules(LevelAccessor pLevel, MobSpawnType pSpawnReason){
+        if (pSpawnReason==MobSpawnType.NATURAL){
+            // check if spawn reasons
+            // for example
+            // return (ProgressManager.eldritchPortalOpen())
+            // System.out.println("Natural spawn");
+
+        }
+        return true;
     }
 }
