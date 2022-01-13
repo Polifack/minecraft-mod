@@ -30,7 +30,7 @@ public class ZurrudiumZombieEntity extends Zombie {
         super(entityType, levelIn);
     }
 
-    public static AttributeSupplier.Builder prepareAttributes() {
+    public static AttributeSupplier.Builder createAttributes() {
         return Monster.createMonsterAttributes()
                 .add(Attributes.MAX_HEALTH, max_health)
                 .add(Attributes.FOLLOW_RANGE, follow_range)

@@ -1,5 +1,6 @@
 package com.poli.setup;
 
+import com.poli.entity.custom.MimicEntity;
 import com.poli.entity.custom.ZurrudiumZombieEntity;
 import com.poli.world.ModCustomWorldGeneration;
 import com.poli.world.ModEntityGeneration;
@@ -14,6 +15,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import org.jetbrains.annotations.NotNull;
 
+import static com.poli.entity.ModEntityType.MIMIC;
 import static com.poli.entity.ModEntityType.ZURRUDIUM_ZOMBIE;
 import static com.poli.items.ModItems.ZURRUDIUM_INGOT;
 import static com.poli.main.ZurrudiumMod.MODID;
@@ -44,6 +46,7 @@ public class ModSetup {
     @SubscribeEvent
     public static void onAttributeCreate(EntityAttributeCreationEvent event){
         event.put(ZURRUDIUM_ZOMBIE.get(), ZurrudiumZombieEntity.createAttributes().build());
+        event.put(MIMIC.get(), MimicEntity.createAttributes().build());
     }
 
     // Function to be called whenever a FMLCommonSetupEvent is detected

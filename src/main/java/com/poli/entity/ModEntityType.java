@@ -1,5 +1,6 @@
 package com.poli.entity;
 
+import com.poli.entity.custom.MimicEntity;
 import com.poli.entity.custom.ZurrudiumZombieEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -19,11 +20,16 @@ public class ModEntityType {
     // .sized(x,y) is the mob hitbox
     public static final RegistryObject<EntityType<ZurrudiumZombieEntity>> ZURRUDIUM_ZOMBIE = DR_ENTITY.register(
             "zurrudium_zombie", () -> EntityType.Builder.of(
-                    ZurrudiumZombieEntity::new,
-                            MobCategory.MONSTER)
-            .sized(1.5f, 2f)
-            .clientTrackingRange(8)
-            .setShouldReceiveVelocityUpdates(false)
-            .build("zurrudium_zombie"));
-
+                    ZurrudiumZombieEntity::new, MobCategory.MONSTER)
+                    .sized(1.5f, 2f)
+                    .clientTrackingRange(8)
+                    .setShouldReceiveVelocityUpdates(false)
+                    .build("zurrudium_zombie"));
+    public static final RegistryObject<EntityType<MimicEntity>> MIMIC = DR_ENTITY.register(
+            "mimic", () -> EntityType.Builder.of(
+                            MimicEntity::new, MobCategory.MONSTER)
+                    .sized(0.9f, 0.9f)
+                    .clientTrackingRange(8)
+                    .setShouldReceiveVelocityUpdates(false)
+                    .build("mimic"));
 }

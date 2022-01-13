@@ -21,6 +21,10 @@ public class ModItemModels extends ItemModelProvider {
         withExistingParent(QUICKSAND_BLOCK.get().getRegistryName().getPath(),
                 modLoc("block/quicksand_block"));
 
+        // register model for mimic_block
+        withExistingParent(MIMIC_BLOCK.get().getRegistryName().getPath(),
+                modLoc("block/mimic_block"));
+
         // Set textures for chunk / ingot
         singleTexture(ZURRUDIUM_RAW.get().getRegistryName().getPath(), mcLoc("item/generated"),
                 "layer0", modLoc("item/zurrudium_raw"));
@@ -57,6 +61,8 @@ public class ModItemModels extends ItemModelProvider {
 
         // spawn eggs
         withExistingParent(ZURRUDIUM_ZOMBIE_SPAWN.get().getRegistryName().getPath(),
+                mcLoc("item/template_spawn_egg"));
+        withExistingParent(MIMIC_SPAWN.get().getRegistryName().getPath(),
                 mcLoc("item/template_spawn_egg"));
     }
 }

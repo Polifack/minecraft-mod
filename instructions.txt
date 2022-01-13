@@ -66,6 +66,21 @@
 
 -> Create a mob that runs away from the player and turns into a block that he is touching. When he is in block form
 he attacks the player and runs away again to hide.
+    - When spawned will turn into a MimicBlock
+    - MimicBlock will always be facing down
+    - MimicBlock will have the texture of the block that surrounds him the most
+    - MimicBlock will tick the server to check if player is in TRACK_DISTANCE.
+    - When player is found in distance the block will despawn and spawn a MimicMob in its position
+    - The MimicMob will attack the player and then runAway
+            -> MimicAttackPlayerGoal
+            -> MimicTryToHideGoal
+    - After attacking the player the mimic will once again turn into a block
+    - If player is invisible the MimicBlock will not track him and therefore won't turn into a MimicMob
+    - If the player mines the MimicBlock it will drop MimicDrops
+    - If the player right-clicks the MimicBlock with a specific tool the MimicBlock will be destroyed and
+      drop MimicDrops
+
+    Note: Mimics wont spawn until player gets achievement XXX
 
 -> Parametrizable classes
     class_name<T> means that the Class class_name is parametrizable with parameter T

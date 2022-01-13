@@ -12,8 +12,6 @@ import static com.poli.main.ZurrudiumMod.MODID;
 
 public class ZurrudiumZombieModel extends HumanoidModel<ZurrudiumZombieEntity> {
 
-    // HITBOX CREATION !!!
-
     /*
     Using generated class from workbench
     this is forge 1.6

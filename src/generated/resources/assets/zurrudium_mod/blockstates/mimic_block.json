@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "zurrudium_mod:block/mimic_block",
+      "x": 180
+    },
+    "facing=up": {
+      "model": "zurrudium_mod:block/mimic_block"
+    },
+    "facing=north": {
+      "model": "zurrudium_mod:block/mimic_block",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "zurrudium_mod:block/mimic_block",
+      "x": 90,
+      "y": 180
+    },
+    "facing=west": {
+      "model": "zurrudium_mod:block/mimic_block",
+      "x": 90,
+      "y": 270
+    },
+    "facing=east": {
+      "model": "zurrudium_mod:block/mimic_block",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

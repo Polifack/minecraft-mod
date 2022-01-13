@@ -11,6 +11,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import static com.poli.entity.ModEntityType.MIMIC;
 import static com.poli.entity.ModEntityType.ZURRUDIUM_ZOMBIE;
 import static com.poli.items.ModArmorMaterials.ZURRUDIUM_ARMOR_MATERIAL;
 import static com.poli.items.ModItemsProperties.ITEM_PROPERTIES;
@@ -31,6 +32,7 @@ public class ModItems {
     //Blocks
     public static final RegistryObject<Item> ZURRUDIUM_ORE = fromBlock(ModBlocks.ZURRUDIUM_ORE);
     public static final RegistryObject<Item> QUICKSAND_BLOCK = fromBlock(ModBlocks.QUICKSAND_BLOCK);
+    public static final RegistryObject<Item> MIMIC_BLOCK= fromBlock(ModBlocks.MIMIC_BLOCK);
 
 
     // Items
@@ -87,4 +89,7 @@ public class ModItems {
     public static final RegistryObject<Item> ZURRUDIUM_ZOMBIE_SPAWN=
             DR_ITEMS.register("zurrudium_zombie_spawn",
                     ()->new ForgeSpawnEggItem(ZURRUDIUM_ZOMBIE,0xff0000, 0x00ffaa, ITEM_PROPERTIES));
+    public static final RegistryObject<Item> MIMIC_SPAWN=
+            DR_ITEMS.register("mimic_spawn",
+                    ()->new ForgeSpawnEggItem(MIMIC,0x6e5280, 0xe972ed, ITEM_PROPERTIES));
 }
