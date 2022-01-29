@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ixi",
+    "ixi",
+    " s "
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:iron_ingot"
+    },
+    "i": {
+      "item": "zurrudium_mod:zurrudium_ingot"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "zurrudium_mod:lightning_hammer"
+  }
+}

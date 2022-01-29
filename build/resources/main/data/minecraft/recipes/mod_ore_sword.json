@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " x ",
+    " x ",
+    " # "
+  ],
+  "key": {
+    "x": {
+      "item": "zurrudium_mod:zurrudium_ingot"
+    },
+    "#": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "zurrudium_mod:zurrudium_sword"
+  }
+}

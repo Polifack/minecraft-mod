@@ -1,0 +1,17 @@
+{
+  "mimic_hurt": {
+    "sounds": [
+      "zurrudium_mod:mobs/mimic/mimic_hurt"
+    ]
+  },
+  "mimic_death": {
+    "sounds": [
+      "zurrudium_mod:mobs/mimic/mimic_death"
+    ]
+  },
+  "mimic_ambient": {
+    "sounds": [
+      "zurrudium_mod:mobs/mimic/mimic_ambient"
+    ]
+  }
+}

@@ -12,7 +12,9 @@ import java.util.List;
 public class ModEntityGeneration {
     public static void onEntitySpawn(final BiomeLoadingEvent event){
         addEntityToAllBiomes(event.getSpawns(), ModEntityType.ZURRUDIUM_ZOMBIE.get()
-                , 40, 1, 2);
+                , 40, 0, 2);
+        addEntityToAllBiomes(event.getSpawns(), ModEntityType.MIMIC.get(),
+                20, 0, 2);
     }
 
     public static void addEntityToAllBiomes(MobSpawnSettingsBuilder spawns, EntityType<?> type,

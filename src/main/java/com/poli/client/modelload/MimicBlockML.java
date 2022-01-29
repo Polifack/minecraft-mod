@@ -8,12 +8,12 @@ import net.minecraft.client.renderer.block.model.ItemOverrides;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.resources.model.*;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.packs.resources.Resource;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraftforge.client.ForgeHooksClient;
 import net.minecraftforge.client.model.IModelConfiguration;
 import net.minecraftforge.client.model.IModelLoader;
 import net.minecraftforge.client.model.geometry.IModelGeometry;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Collection;
 import java.util.List;
@@ -27,12 +27,12 @@ import static com.poli.main.ZurrudiumMod.MODID;
 
 // Main ModelLoader class
 public class MimicBlockML implements IModelLoader<MimicBlockML.MimicBlockMG> {
-        public static final ResourceLocation MIMIC_ML = new ResourceLocation(MODID, "mimic_loader");
-    public static final Material MATERIAL_SIDE = ForgeHooksClient.getBlockMaterial(
-            new ResourceLocation(MODID, "block/mimic_block")); ;
+    public static final ResourceLocation MIMIC_ML = new ResourceLocation(MODID, "mimic_loader");
+    public static final ResourceLocation MIMIC_TEXTURE = new ResourceLocation(MODID, "block/mimic_block");
+    public static final Material MIMIC_MATERIAL = ForgeHooksClient.getBlockMaterial(MIMIC_TEXTURE);
 
     @Override
-    public MimicBlockMG read(JsonDeserializationContext deserializationContext, JsonObject modelContents) {
+    public @NotNull MimicBlockMG read(JsonDeserializationContext deserializationContext, JsonObject modelContents) {
         return new MimicBlockMG();
     }
 
@@ -49,16 +49,14 @@ public class MimicBlockML implements IModelLoader<MimicBlockML.MimicBlockMG> {
         public BakedModel bake(IModelConfiguration owner, ModelBakery bakery,
                                Function<Material, TextureAtlasSprite> spriteGetter, ModelState modelTransform,
                                ItemOverrides overrides, ResourceLocation modelLocation) {
-
-            return new MimicBlockBM(modelTransform,spriteGetter);
+            return new MimicBlockBM(modelTransform, spriteGetter);
         }
 
         @Override
         public Collection<Material> getTextures(IModelConfiguration owner,
                                                 Function<ResourceLocation, UnbakedModel> modelGetter,
                                                 Set<Pair<String, String>> missingTextureErrors) {
-
-            return List.of(MATERIAL_SIDE);
+            return List.of(MIMIC_MATERIAL);
         }
     }
 }

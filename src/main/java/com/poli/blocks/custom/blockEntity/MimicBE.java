@@ -55,12 +55,8 @@ public class MimicBE extends BlockEntity implements IForgeBlockEntity {
     }
 
     public BlockState getNeighbour(Level worldIn, BlockPos pPos) {
-        // note that on blocks like grass_block the mimic does not work
         BlockState bs = worldIn.getBlockState(pPos.below());
-        System.out.println("Block below ="+bs);
-
         return bs;
-
     }
 
     // The getUpdateTag()/handleUpdateTag() pair is called whenever the client receives a new chunk
@@ -97,10 +93,9 @@ public class MimicBE extends BlockEntity implements IForgeBlockEntity {
         // getUpdatePacket -> Save the update packet
 
         if (level!=null && (imitatingBlock == null)) {
-
             // If we have level and no imitatingBlock then get imitatingBlock
-
             imitatingBlock=getNeighbour(level, worldPosition);
+            System.out.println(imitatingBlock);
         }
 
         // create a new packet based on this class
@@ -139,10 +134,10 @@ public class MimicBE extends BlockEntity implements IForgeBlockEntity {
     public IModelData getModelData(){
         // Retrieve the model data.
         // This is called from the ModelDataManager
-        IModelData imitatingBlockMD = new ModelDataMap.Builder()
+        IModelData imitatingBlockModelData = new ModelDataMap.Builder()
                 .withInitial(IMITATING_BLOCK, imitatingBlock)
                 .build();
-        return imitatingBlockMD;
+        return imitatingBlockModelData;
     }
 
 
@@ -160,7 +155,7 @@ public class MimicBE extends BlockEntity implements IForgeBlockEntity {
     }
 
     public void tickClient(Level pLevel, BlockPos pPos){
-
+        //
     }
 
     public void tickServer(Level worldIn, int mimicCurrentHP){
@@ -169,8 +164,6 @@ public class MimicBE extends BlockEntity implements IForgeBlockEntity {
         boolean isNearPlayer = worldIn.hasNearbyAlivePlayer(blockWorldPosition.x, blockWorldPosition.y,
                 blockWorldPosition.z, trackDistance);
         if (!isNearPlayer) return;
-        Player target = worldIn.getNearestPlayer(TargetingConditions.forNonCombat(), blockWorldPosition.x, blockWorldPosition.y,
-                blockWorldPosition.z);
         try
         {
             // get spawn world position and spawn mimic

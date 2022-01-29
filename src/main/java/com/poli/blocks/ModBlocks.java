@@ -2,6 +2,7 @@ package com.poli.blocks;
 
 import com.poli.blocks.custom.MimicBlock;
 import com.poli.blocks.custom.QuicksandBlock;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;

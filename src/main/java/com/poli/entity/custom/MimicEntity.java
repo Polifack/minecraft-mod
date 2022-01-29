@@ -6,11 +6,13 @@ import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.Difficulty;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.Goal;
@@ -21,16 +23,17 @@ import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import static com.poli.blocks.ModBlocks.MIMIC_BLOCK;
+import static com.poli.client.ModSoundEvents.*;
 
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.LightLayer;
+import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.pathfinder.Path;
 import net.minecraft.world.phys.Vec3;
 
 import javax.annotation.Nullable;
-import java.util.Arrays;
 import java.util.EnumSet;
+import java.util.Random;
 
 public class MimicEntity extends Monster {
     public static int max_health = 10;
@@ -40,6 +43,8 @@ public class MimicEntity extends Monster {
     public static double armor_value = 0;
     public static double attack_knockback = 1;
     public static double armor_toughness = 1;
+
+    public static int spawn_height = 60;
 
     public static final int xp_reward = 10;
 
@@ -67,22 +72,38 @@ public class MimicEntity extends Monster {
         has_attacked=value;
     }
 
-    // mimic sounds
-    // https://drive.google.com/drive/u/0/folders/1MoI1AcHuZKZ59raSQWU1WS6581pQ7Hl9
+
     public SoundSource getSoundSource() {
         return SoundSource.HOSTILE;
     }
+
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.SHULKER_AMBIENT;
+        return MIMIC_AMBIENT.get();
     }
+
     protected SoundEvent getDeathSound() {
-        return SoundEvents.SHULKER_DEATH;
+        return MIMIC_DEATH.get();
     }
-    protected SoundEvent getHurtSound(DamageSource pDamageSource) { return SoundEvents.SHULKER_HURT_CLOSED; }
+
+    protected SoundEvent getHurtSound(DamageSource pDamageSource) {return MIMIC_HURT.get();}
+
     protected Entity.MovementEmission getMovementEmission() {
         return Entity.MovementEmission.EVENTS;
     }
     protected int getExperienceReward(Player pPlayer){return xp_reward;}
+
+    public static boolean checkSpawnHeight(BlockPos pPos, MobSpawnType pReason){
+        if (!pReason.equals(MobSpawnType.NATURAL)) return true;
+        else return (pPos.getY()<spawn_height);
+    }
+
+    public static boolean spawnConditions(EntityType<? extends Monster> pType, ServerLevelAccessor pLevel,
+                                                 MobSpawnType pReason, BlockPos pPos, Random pRandom) {
+        return pLevel.getDifficulty() != Difficulty.PEACEFUL
+                && isDarkEnoughToSpawn(pLevel, pPos, pRandom)
+                && checkMobSpawnRules(pType, pLevel, pReason, pPos, pRandom)
+                && checkSpawnHeight(pPos, pReason);
+    }
 
     public void tick() {
         this.yBodyRot = this.getYRot();
@@ -126,6 +147,9 @@ public class MimicEntity extends Monster {
             //Vec3 vec3 = DefaultRandomPos.getPos(mimicMob, 20, 4);
             LivingEntity targetEntity = mimicMob.level.getNearestPlayer(TargetingConditions.DEFAULT,
                     mimicMob, mimicMob.getX(), mimicMob.getEyeY(), mimicMob.getZ());
+
+            if (targetEntity==null) return;
+
             Vec3 vec3 = DefaultRandomPos.getPosAway(mimicMob,24, 1, targetEntity.position());
 
             if (vec3 != null) {

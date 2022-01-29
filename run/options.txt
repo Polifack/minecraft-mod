@@ -20,11 +20,11 @@ toggleSprint:false
 darkMojangStudiosBackground:false
 hideLightningFlashes:false
 mouseSensitivity:0.9014084507042254
-fov:0.25
+fov:0.75
 screenEffectScale:1.0
 fovEffectScale:1.0
 gamma:1.0
-renderDistance:8
+renderDistance:10
 simulationDistance:6
 entityDistanceScaling:1.0
 guiScale:2
@@ -149,3 +149,4 @@ modelPart_right_sleeve:true
 modelPart_left_pants_leg:true
 modelPart_right_pants_leg:true
 modelPart_hat:true
+fullscreenResolution:1280x720@60:24

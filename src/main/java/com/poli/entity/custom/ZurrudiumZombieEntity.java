@@ -66,21 +66,14 @@ public class ZurrudiumZombieEntity extends Zombie {
         return false;
     }
 
+    // disable can pick up loot
     @Override
     public boolean canPickUpLoot() {
         return false;
     }
 
-    // Override from PathfinderMob
     @Override
-    public boolean checkSpawnRules(LevelAccessor pLevel, MobSpawnType pSpawnReason){
-        if (pSpawnReason==MobSpawnType.NATURAL){
-            // check if spawn reasons
-            // for example
-            // return (ProgressManager.eldritchPortalOpen())
-            // System.out.println("Natural spawn");
-
-        }
+    protected boolean isSunSensitive() {
         return true;
     }
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "zurrudium_mod:block/zurrudium_ore"
+  }
+}

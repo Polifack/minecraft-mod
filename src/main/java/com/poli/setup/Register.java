@@ -1,11 +1,14 @@
 package com.poli.setup;
 
+import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import static com.poli.blocks.ModBlockEntities.DR_BLOCK_ENTITIES;
 import static com.poli.blocks.ModBlocks.DR_BLOCKS;
+import static com.poli.client.ModSoundEvents.DR_SOUND_EVENTS;
 import static com.poli.entity.ModEntityType.DR_ENTITY;
+//import static com.poli.entity.ModEntityType.RegisterSpawns;
 import static com.poli.items.ModItems.DR_ITEMS;
 
 public class Register {
@@ -18,5 +21,8 @@ public class Register {
         DR_ITEMS.register(eventBus);
         DR_ENTITY.register(eventBus);
         DR_BLOCK_ENTITIES.register(eventBus);
+        DR_SOUND_EVENTS.register(eventBus);
+
+        //RegisterSpawns();
     }
 }

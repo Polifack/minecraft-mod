@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "zurrudium_mod:zurrudium_ore"
+  },
+  "result": "zurrudium_mod:zurrudium_ingot",
+  "experience": 1.0,
+  "cookingtime": 100
+}

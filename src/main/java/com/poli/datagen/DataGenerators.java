@@ -23,6 +23,7 @@ public class DataGenerators {
             generator.addProvider(new ModLootTable(generator));
             generator.addProvider(blocksTags);
             generator.addProvider(new ModItemTags(generator, blocksTags, event.getExistingFileHelper()));
+            //generator.addProvider(new ModSounds(generator, event.getExistingFileHelper()));
 
         }
         // For the client (blocks, models, locale)
@@ -30,7 +31,7 @@ public class DataGenerators {
             generator.addProvider(new ModBlockStates(generator, event.getExistingFileHelper()));
             generator.addProvider(new ModItemModels(generator, event.getExistingFileHelper()));
             generator.addProvider(new ModLanguageProvider(generator, "en_us"));
-
+            generator.addProvider(new ModSounds(generator, event.getExistingFileHelper()));
         }
     }
 }
