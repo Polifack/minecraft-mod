@@ -18,9 +18,21 @@ public class MimicModel extends HierarchicalModel<MimicEntity> {
     // This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
     public static final ModelLayerLocation MIMIC_MODEL_LAYER = new ModelLayerLocation(new ResourceLocation(MODID, "mimic_model"), "main");
     private final ModelPart root;
+    private final ModelPart frl;
+    private final ModelPart fll;
+    private final ModelPart brl;
+    private final ModelPart bll;
+
 
     public MimicModel(ModelPart root) {
         this.root = root.getChild("root");
+        ModelPart f = this.root.getChild("front");
+        this.frl=f.getChild("front_right");
+        this.fll=f.getChild("front_left");
+        ModelPart b = this.root.getChild("back");
+        this.brl=b.getChild("back_right");
+        this.bll=b.getChild("back_left");
+
     }
     public ModelPart root() {
         return this.root;
@@ -78,6 +90,10 @@ public class MimicModel extends HierarchicalModel<MimicEntity> {
      * Sets this entity's model rotation angles
      */
     public void setupAnim(MimicEntity pEntity, float pLimbSwing, float pLimbSwingAmount, float pAgeInTicks, float pNetHeadYaw, float pHeadPitch) {
+        this.frl.zRot = Mth.cos(pAgeInTicks * 0.9F + 0.15F * (float)Math.PI) * (float)Math.PI ;
+        this.fll.zRot = Mth.sin(pAgeInTicks * 0.9F + 0.15F * (float)Math.PI) * (float)Math.PI ;
+        this.brl.zRot = Mth.cos(pAgeInTicks * 0.9F + 0.15F * (float)Math.PI) * (float)Math.PI ;
+        this.bll.zRot = Mth.sin(pAgeInTicks * 0.9F + 0.15F * (float)Math.PI) * (float)Math.PI ;
 
     }
 }

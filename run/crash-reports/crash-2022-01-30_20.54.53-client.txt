@@ -1,0 +1,331 @@
+---- Minecraft Crash Report ----
+// Shall we play a game?
+
+Time: 1/30/22, 8:54 PM
+Description: Rendering overlay
+
+java.lang.IllegalArgumentException: Failed to create model for zurrudium_mod:mimic
+	at net.minecraft.client.renderer.entity.EntityRenderers.lambda$createEntityRenderers$2(EntityRenderers.java:41) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at java.util.HashMap.forEach(HashMap.java:1421) ~[?:?] {}
+	at net.minecraft.client.renderer.entity.EntityRenderers.createEntityRenderers(EntityRenderers.java:37) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.entity.EntityRenderDispatcher.onResourceManagerReload(EntityRenderDispatcher.java:337) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.server.packs.resources.ResourceManagerReloadListener.lambda$reload$0(ResourceManagerReloadListener.java:13) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:787) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:67) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:90) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$4(SimpleReloadInstance.java:66) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:572) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:784) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:795) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:67) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:90) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$4(SimpleReloadInstance.java:66) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:572) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:784) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:795) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:67) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:90) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$4(SimpleReloadInstance.java:66) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:572) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:784) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:795) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:67) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:90) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$4(SimpleReloadInstance.java:66) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:572) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:784) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:726) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:67) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:90) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$4(SimpleReloadInstance.java:66) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:572) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:714) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:726) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:67) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:90) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$4(SimpleReloadInstance.java:66) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:572) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:714) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:726) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:67) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:90) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$4(SimpleReloadInstance.java:66) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:572) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:714) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:726) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:67) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:90) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$4(SimpleReloadInstance.java:66) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:572) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:714) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:726) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:67) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:90) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$4(SimpleReloadInstance.java:66) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:572) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:714) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:726) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:67) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:90) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$4(SimpleReloadInstance.java:66) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:572) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:714) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:726) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at com.mojang.blaze3d.systems.RenderSystem.replayQueue(RenderSystem.java:174) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:runtimedistcleaner:A}
+	at com.mojang.blaze3d.systems.RenderSystem.flipFrame(RenderSystem.java:163) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:runtimedistcleaner:A}
+	at com.mojang.blaze3d.platform.Window.updateDisplay(Window.java:333) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1088) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.run(Minecraft.java:665) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:205) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:runtimedistcleaner:A}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?] {}
+	at net.minecraftforge.fml.loading.targets.ForgeClientUserdevLaunchHandler.lambda$launchService$0(ForgeClientUserdevLaunchHandler.java:38) ~[fmlloader-1.18.1-39.0.9.jar%230!:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-9.0.21.jar%2310!:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-9.0.21.jar%2310!:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-9.0.21.jar%2310!:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:106) [modlauncher-9.0.21.jar%2310!:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:77) [modlauncher-9.0.21.jar%2310!:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-9.0.21.jar%2310!:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-9.0.21.jar%2310!:?] {}
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:90) [bootstraplauncher-0.1.17.jar:?] {}
+Caused by: java.util.NoSuchElementException: Can't find part front_
+	at net.minecraft.client.model.geom.ModelPart.getChild(ModelPart.java:60) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:runtimedistcleaner:A}
+	at com.poli.entity.custom.models.MimicModel.<init>(MimicModel.java:26) ~[%2381!:?] {re:classloading}
+	at com.poli.entity.custom.renderer.MimicRenderer.<init>(MimicRenderer.java:15) ~[%2381!:?] {re:classloading}
+	at net.minecraft.client.renderer.entity.EntityRenderers.lambda$createEntityRenderers$2(EntityRenderers.java:39) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	... 115 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at net.minecraft.client.renderer.entity.EntityRenderers.lambda$createEntityRenderers$2(EntityRenderers.java:41) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at java.util.HashMap.forEach(HashMap.java:1421) ~[?:?] {}
+	at net.minecraft.client.renderer.entity.EntityRenderers.createEntityRenderers(EntityRenderers.java:37) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.entity.EntityRenderDispatcher.onResourceManagerReload(EntityRenderDispatcher.java:337) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.server.packs.resources.ResourceManagerReloadListener.lambda$reload$0(ResourceManagerReloadListener.java:13) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:787) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:67) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:90) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$4(SimpleReloadInstance.java:66) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:572) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:784) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:795) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:67) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:90) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$4(SimpleReloadInstance.java:66) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:572) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:784) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:795) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:67) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:90) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$4(SimpleReloadInstance.java:66) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:572) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:784) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:795) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:67) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:90) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$4(SimpleReloadInstance.java:66) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:572) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:784) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:726) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:67) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:90) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$4(SimpleReloadInstance.java:66) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:572) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:714) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:726) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:67) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:90) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$4(SimpleReloadInstance.java:66) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:572) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:714) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:726) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:67) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:90) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$4(SimpleReloadInstance.java:66) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:572) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:714) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:726) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:67) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:90) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$4(SimpleReloadInstance.java:66) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:572) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:714) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:726) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:67) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:90) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$4(SimpleReloadInstance.java:66) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:572) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:714) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:726) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:67) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:90) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$4(SimpleReloadInstance.java:66) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:572) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:714) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:726) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at com.mojang.blaze3d.systems.RenderSystem.replayQueue(RenderSystem.java:174) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:runtimedistcleaner:A}
+	at com.mojang.blaze3d.systems.RenderSystem.flipFrame(RenderSystem.java:163) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:runtimedistcleaner:A}
+-- Overlay render details --
+Details:
+	Overlay name: net.minecraft.client.gui.screens.LoadingOverlay
+Stacktrace:
+	at net.minecraft.client.renderer.GameRenderer.render(GameRenderer.java:890) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1066) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.run(Minecraft.java:665) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:205) ~[forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.18.1-recomp.jar%2377!:?] {re:classloading,pl:runtimedistcleaner:A}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?] {}
+	at net.minecraftforge.fml.loading.targets.ForgeClientUserdevLaunchHandler.lambda$launchService$0(ForgeClientUserdevLaunchHandler.java:38) ~[fmlloader-1.18.1-39.0.9.jar%230!:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-9.0.21.jar%2310!:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-9.0.21.jar%2310!:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-9.0.21.jar%2310!:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:106) [modlauncher-9.0.21.jar%2310!:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:77) [modlauncher-9.0.21.jar%2310!:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-9.0.21.jar%2310!:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-9.0.21.jar%2310!:?] {}
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:90) [bootstraplauncher-0.1.17.jar:?] {}
+
+
+-- Last reload --
+Details:
+	Reload number: 1
+	Reload reason: initial
+	Finished: No
+	Packs: Default, Mod Resources
+
+-- System Details --
+Details:
+	Minecraft Version: 1.18.1
+	Minecraft Version ID: 1.18.1
+	Operating System: Linux (amd64) version 5.15.16-1-MANJARO
+	Java Version: 17.0.2, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode, sharing), Oracle Corporation
+	Memory: 989162704 bytes (943 MiB) / 1960837120 bytes (1870 MiB) up to 4118806528 bytes (3928 MiB)
+	CPUs: 8
+	Processor Vendor: GenuineIntel
+	Processor Name: 11th Gen Intel(R) Core(TM) i5-1155G7 @ 2.50GHz
+	Identifier: Intel64 Family 6 Model 140 Stepping 2
+	Microarchitecture: Tiger Lake
+	Frequency (GHz): 2.50
+	Number of physical packages: 1
+	Number of physical CPUs: 4
+	Number of logical CPUs: 8
+	Graphics card #0 name: TigerLake-LP GT2 [Iris Xe Graphics]
+	Graphics card #0 vendor: Intel Corporation (0x8086)
+	Graphics card #0 VRAM (MB): 256.00
+	Graphics card #0 deviceId: 0x9a49
+	Graphics card #0 versionInfo: unknown
+	Virtual memory max (MB): 7852.47
+	Virtual memory used (MB): 8544.87
+	Swap memory total (MB): 0.00
+	Swap memory used (MB): 0.00
+	JVM Flags: 0 total; 
+	Launched Version: MOD_DEV
+	Backend library: LWJGL version 3.2.2 SNAPSHOT
+	Backend API: Mesa Intel(R) Xe Graphics (TGL GT2) GL version 4.6 (Core Profile) Mesa 21.3.4, Intel
+	Window size: 854x480
+	GL Caps: Using framebuffer using OpenGL 3.2
+	GL debug messages: 
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'forge'
+	Type: Client (map_client.txt)
+	Graphics mode: fancy
+	Resource Packs: 
+	Current Language: English (US)
+	CPU: 8x 11th Gen Intel(R) Core(TM) i5-1155G7 @ 2.50GHz
+	ModLauncher: 9.0.21+9.0.21+main.6bb4b073
+	ModLauncher launch target: forgeclientuserdev
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		 mixin PLUGINSERVICE 
+		 eventbus PLUGINSERVICE 
+		 object_holder_definalize PLUGINSERVICE 
+		 runtime_enum_extender PLUGINSERVICE 
+		 capability_token_subclass PLUGINSERVICE 
+		 accesstransformer PLUGINSERVICE 
+		 runtimedistcleaner PLUGINSERVICE 
+		 mixin TRANSFORMATIONSERVICE 
+		 fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		minecraft@1.0
+		javafml@null
+	Mod List: 
+		forge-1.18.1-39.0.9_mapped_parchment_2021.12.19-1.|Minecraft                     |minecraft                     |1.18.1              |DONE      |Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		the-one-probe-245211-3550084_mapped_parchment_2021|The One Probe                 |theoneprobe                   |1.18-5.0.0          |DONE      |Manifest: NOSIGNATURE
+		                                                  |Forge                         |forge                         |39.0.9              |DONE      |Manifest: NOSIGNATURE
+		main                                              |Zurrudium Mod                 |zurrudium_mod                 |0.0NONE             |DONE      |Manifest: NOSIGNATURE
+		jei-1.18-9.0.0.40_mapped_parchment_2021.12.19-1.18|Just Enough Items             |jei                           |9.0.0.40            |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: 6978738f-b613-43ca-ab32-bd27a54252cd
+	FML: 39.0
+	Forge: net.minecraftforge:39.0.9

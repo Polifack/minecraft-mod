@@ -30,7 +30,7 @@ public class ModEntityType {
 
     public static final EntityType<MimicEntity> MIMIC_ENTITY =EntityType.Builder.of(
                     MimicEntity::new, MobCategory.MONSTER)
-            .sized(0.9f, 0.9f)
+            .sized(1f, 1f)
             .clientTrackingRange(8)
             .setShouldReceiveVelocityUpdates(false)
             .build("mimic");
