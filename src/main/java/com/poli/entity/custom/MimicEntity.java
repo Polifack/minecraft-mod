@@ -3,6 +3,7 @@ package com.poli.entity.custom;
 import com.poli.blocks.custom.MimicBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -107,6 +108,8 @@ public class MimicEntity extends Monster {
 
     public void tick() {
         this.yBodyRot = this.getYRot();
+        this.level.addParticle(ParticleTypes.DRAGON_BREATH, this.getX(), this.getY(), this.getZ(),
+                0D, 0D, 0D);
         super.tick();
     }
     public void setYBodyRot(float pOffset) {
@@ -114,11 +117,11 @@ public class MimicEntity extends Monster {
         super.setYBodyRot(pOffset);
     }
     protected void registerGoals(){
-        this.goalSelector.addGoal(2, new MimicAttackGoal(this, 2.0D,
+        this.goalSelector.addGoal(2, new MimicAttackGoal(this, 1.0D,
                 true));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Player.class,
-                true));
-        this.goalSelector.addGoal(1, new MimicHideGoal(this, 3.0D));
+                false));
+        this.goalSelector.addGoal(1, new MimicHideGoal(this, 2.0D));
     }
 
     static class MimicHideGoal extends Goal{
@@ -144,14 +147,12 @@ public class MimicEntity extends Monster {
         }
 
         protected void findRandomPosition() {
-            //Vec3 vec3 = DefaultRandomPos.getPos(mimicMob, 20, 4);
             LivingEntity targetEntity = mimicMob.level.getNearestPlayer(TargetingConditions.DEFAULT,
                     mimicMob, mimicMob.getX(), mimicMob.getEyeY(), mimicMob.getZ());
 
             if (targetEntity==null) return;
 
             Vec3 vec3 = DefaultRandomPos.getPosAway(mimicMob,24, 1, targetEntity.position());
-
             if (vec3 != null) {
                 double d = vec3.distanceToSqr(posX, posY, posZ);
 
@@ -173,12 +174,21 @@ public class MimicEntity extends Monster {
                 Level currentLevel = mimicMob.level;
                 BlockPos currentBlockPos = mimicMob.blockPosition();
 
+                // spawn particles in the position
+                // this is not working for an unknown reason
+                for (int i = 0; i<200; i++){
+                    currentLevel.addParticle(ParticleTypes.DRAGON_BREATH,
+                            currentBlockPos.getX(), currentBlockPos.getY(), currentBlockPos.getZ(),
+                            0D, 0.5D, 0D);
+                }
+
                 // Set the mimic hp in the mimicBlock
                 // the correct way to do this is
                 // PlacementContext pc = new PlacementContext(mimicMob.level, chunk, PlacementFeature.hp)
                 // we are changing the mimicblock currenthp value in memory, and that is wrong
                 // currently is done by whenever the entity dies we restore the value to max_hp
                 // but if two mimics are alive this gets messy
+                // this code is bullshit
 
                 int mimicCurrentHP=(int) mimicMob.getHealth();
 
@@ -186,7 +196,6 @@ public class MimicEntity extends Monster {
                 currentMimicBlock.setMimicHp(mimicCurrentHP);
                 BlockState blockState=currentMimicBlock.getStateForPlacement(null);
                 currentLevel.setBlock(currentBlockPos, blockState, 3);
-
                 // Destroy the current mimicEntity
                 mimicMob.discard();
             }

@@ -15,92 +15,70 @@ import java.util.Arrays;
 import static com.poli.main.ZurrudiumMod.MODID;
 
 public class MimicModel extends HierarchicalModel<MimicEntity> {
-    public static final ModelLayerLocation MIMIC_MODEL_LAYER =
-            new ModelLayerLocation(new ResourceLocation(MODID,"mimic_model"), "root");
-    private final ModelPart mimic;
+    // This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
+    public static final ModelLayerLocation MIMIC_MODEL_LAYER = new ModelLayerLocation(new ResourceLocation(MODID, "mimic_model"), "main");
+    private final ModelPart root;
 
     public MimicModel(ModelPart root) {
-        this.mimic = root.getChild("mimic");
+        this.root = root.getChild("root");
     }
-
-    private static String createSegmentName(int pIndex) {
-        return "segment" + pIndex;
+    public ModelPart root() {
+        return this.root;
     }
-
 
     public static LayerDefinition createBodyLayer() {
         MeshDefinition meshdefinition = new MeshDefinition();
         PartDefinition partdefinition = meshdefinition.getRoot();
 
-        PartDefinition mimic =
-                partdefinition.addOrReplaceChild(
-                        "mimic",
-                        CubeListBuilder.create()
-                                .texOffs(0, 9)
-                                .addBox(-1.5F, -2.0F, 0.0F, 3.0F, 3.0F, 3.0F, new CubeDeformation(0.0F)),
-                        PartPose.offset(0.0F, 21.0F, 2.5F));
+        PartDefinition root = partdefinition.addOrReplaceChild("root", CubeListBuilder.create(), PartPose.offset(0.0F, 24.0F, 0.0F));
 
-        PartDefinition head =
-                mimic.addOrReplaceChild(
-                        "head",
-                        CubeListBuilder.create()
-                                .texOffs(12, 9)
-                                .addBox(-2.0F, -2.0F, -4.4F, 4.0F, 3.0F, 2.0F, new CubeDeformation(0.0F)),
-                        PartPose.offset(0.0F, 0.0F, -2.5F));
+        PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create()
+                .texOffs(11, 19).addBox(1.0F, -2.5F, 2.5F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
+                .texOffs(0, 19).addBox(3.0F, -2.5F, 1.5F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
+                .texOffs(19, 1).addBox(1.0F, -2.5F, -0.5F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
+                .texOffs(7, 19).addBox(0.0F, -2.5F, 1.5F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
+                .texOffs(0, 9).addBox(2.0F, -0.5F, -1.5F, 3.0F, 1.0F, 3.0F, new CubeDeformation(0.0F))
+                .texOffs(0, 6).addBox(-1.0F, -0.5F, 2.5F, 6.0F, 1.0F, 2.0F, new CubeDeformation(0.0F))
+                .texOffs(0, 0).addBox(0.0F, -1.5F, -0.5F, 4.0F, 2.0F, 4.0F, new CubeDeformation(0.0F))
+                .texOffs(9, 10).addBox(-1.0F, -0.5F, -1.5F, 2.0F, 1.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offset(-2.0F, -3.5F, -1.5F));
 
-        PartDefinition chest =
-                mimic.addOrReplaceChild(
-                        "chest",
-                        CubeListBuilder.create()
-                                .texOffs(0, 0)
-                                .addBox(-3.0F, -4.0F, -2.4F, 6.0F, 4.0F, 5.0F, new CubeDeformation(0.0F)),
-                        PartPose.offset(0.0F, 0.0F, -2.5F));
+        PartDefinition back = root.addOrReplaceChild("back", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
 
-        PartDefinition tail =
-                mimic.addOrReplaceChild(
-                        "tail",
-                        CubeListBuilder.create()
-                                .texOffs(0, 0)
-                                .addBox(-0.5F, 0.0F, 5.5F, 1.0F, 3.0F, 1.0F, new CubeDeformation(0.0F)),
-                        PartPose.offset(0.0F, 0.0F, -2.5F));
+        PartDefinition back_left = back.addOrReplaceChild("back_left", CubeListBuilder.create()
+                .texOffs(12, 0).addBox(-1.5F, -0.5F, -0.5F, 3.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
+                .texOffs(16, 10).addBox(1.5F, -0.5F, 1.5F, 1.0F, 2.0F, 1.0F, new CubeDeformation(0.0F))
+                .texOffs(8, 14).addBox(0.5F, -0.5F, 0.5F, 2.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
+                .texOffs(9, 16).addBox(2.5F, 0.5F, 1.5F, 1.0F, 2.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(2.5F, -2.5F, 2.5F));
 
-        PartDefinition leg_1 =
-                mimic.addOrReplaceChild(
-                        "leg_1",
-                        CubeListBuilder.create()
-                                .texOffs(17, 0)
-                                .addBox(-2.0F, -1.0F, -1.0F, 2.0F, 2.0F, 2.0F, new CubeDeformation(0.0F))
-                                .texOffs(0, 15)
-                                .addBox(-3.0F, 0.0F, -1.0F, 1.0F, 4.0F, 2.0F, new CubeDeformation(0.0F)),
-                        PartPose.offset(-3.0F, -1.0F, -2.5F));
+        PartDefinition back_right = back.addOrReplaceChild("back_right", CubeListBuilder.create()
+                .texOffs(14, 6).addBox(-1.5F, -0.5F, -0.5F, 2.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
+                .texOffs(12, 2).addBox(-2.5F, -0.5F, 0.5F, 2.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
+                .texOffs(0, 16).addBox(-2.5F, -0.5F, 1.5F, 1.0F, 2.0F, 1.0F, new CubeDeformation(0.0F))
+                .texOffs(0, 0).addBox(-3.5F, 0.5F, 1.5F, 1.0F, 2.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(-2.5F, -2.5F, 2.5F));
 
-        PartDefinition leg_2 =
-                mimic.addOrReplaceChild(
-                        "leg_2",
-                        CubeListBuilder.create()
-                                .texOffs(16, 14)
-                                .addBox(6.0F, -1.0F, -1.0F, 2.0F, 2.0F, 2.0F, new CubeDeformation(0.0F))
-                                .texOffs(10, 14)
-                                .addBox(8.0F, 0.0F, -1.0F, 1.0F, 4.0F, 2.0F, new CubeDeformation(0.0F)),
-                        PartPose.offset(-3.0F, -1.0F, -2.5F));
+        PartDefinition front = root.addOrReplaceChild("front", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
+
+        PartDefinition front_right = front.addOrReplaceChild("front_right", CubeListBuilder.create()
+                .texOffs(4, 14).addBox(-0.5F, -0.5F, -1.0F, 1.0F, 1.0F, 2.0F, new CubeDeformation(0.0F))
+                .texOffs(0, 13).addBox(-1.5F, -0.5F, -2.0F, 1.0F, 1.0F, 2.0F, new CubeDeformation(0.0F))
+                .texOffs(17, 3).addBox(-2.5F, -0.5F, -2.0F, 1.0F, 2.0F, 1.0F, new CubeDeformation(0.0F))
+                .texOffs(13, 16).addBox(-2.5F, 0.5F, -3.0F, 1.0F, 2.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(-2.5F, -2.5F, -2.0F));
+
+        PartDefinition front_left = front.addOrReplaceChild("front_left", CubeListBuilder.create()
+                .texOffs(15, 8).addBox(-1.0F, -0.5F, -0.5F, 2.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
+                .texOffs(14, 14).addBox(0.0F, -0.5F, -1.5F, 2.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
+                .texOffs(4, 17).addBox(1.0F, 0.5F, -3.5F, 1.0F, 2.0F, 1.0F, new CubeDeformation(0.0F))
+                .texOffs(17, 16).addBox(1.0F, -0.5F, -2.5F, 1.0F, 2.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(2.0F, -2.5F, -2.5F));
 
         return LayerDefinition.create(meshdefinition, 32, 32);
     }
 
-    public ModelPart root() {
-        return this.mimic;
-    }
 
     /**
      * Sets this entity's model rotation angles
      */
     public void setupAnim(MimicEntity pEntity, float pLimbSwing, float pLimbSwingAmount, float pAgeInTicks, float pNetHeadYaw, float pHeadPitch) {
-        /*
-        for(int i = 0; i < this.bodyParts.length; ++i) {
-            this.bodyParts[i].yRot = Mth.cos(pAgeInTicks * 0.9F + (float)i * 0.15F * (float)Math.PI) * (float)Math.PI * 0.01F * (float)(1 + Math.abs(i - 2));
-            this.bodyParts[i].x = Mth.sin(pAgeInTicks * 0.9F + (float)i * 0.15F * (float)Math.PI) * (float)Math.PI * 0.1F * (float)Math.abs(i - 2);
-        }
-        */
+
     }
 }
 
