@@ -8,6 +8,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.monster.Endermite;
 
 import static com.poli.entity.custom.models.MimicModel.MIMIC_MODEL_LAYER;
+import static com.poli.main.ZurrudiumMod.MODID;
 
 public class MimicRenderer extends MobRenderer<MimicEntity, MimicModel> {
     public MimicRenderer(EntityRendererProvider.Context context) {
@@ -20,6 +21,6 @@ public class MimicRenderer extends MobRenderer<MimicEntity, MimicModel> {
 
     @Override
     public ResourceLocation getTextureLocation(MimicEntity pEntity) {
-        return new ResourceLocation("textures/entity/endermite.png");
+        return new ResourceLocation(MODID, "textures/entity/mimic.png");
     }
 }

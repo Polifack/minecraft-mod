@@ -15,56 +15,93 @@ import java.util.Arrays;
 import static com.poli.main.ZurrudiumMod.MODID;
 
 public class MimicModel extends HierarchicalModel<MimicEntity> {
-    private static final int BODY_COUNT = 4;
-    private static final int[][] BODY_SIZES = new int[][]{{4, 3, 2}, {6, 4, 5}, {3, 3, 1}, {1, 2, 1}};
-    private static final int[][] BODY_TEXS = new int[][]{{0, 0}, {0, 5}, {0, 14}, {0, 18}};
-    private final ModelPart root;
-    private final ModelPart[] bodyParts;
+    public static final ModelLayerLocation MIMIC_MODEL_LAYER =
+            new ModelLayerLocation(new ResourceLocation(MODID,"mimic_model"), "root");
+    private final ModelPart mimic;
 
-    public MimicModel(ModelPart pRoot) {
-        this.root = pRoot;
-        this.bodyParts = new ModelPart[4];
-
-        for(int i = 0; i < 4; ++i) {
-            this.bodyParts[i] = pRoot.getChild(createSegmentName(i));
-        }
-
+    public MimicModel(ModelPart root) {
+        this.mimic = root.getChild("mimic");
     }
 
     private static String createSegmentName(int pIndex) {
         return "segment" + pIndex;
     }
 
+
     public static LayerDefinition createBodyLayer() {
         MeshDefinition meshdefinition = new MeshDefinition();
         PartDefinition partdefinition = meshdefinition.getRoot();
-        float f = -3.5F;
 
-        for(int i = 0; i < 4; ++i) {
-            partdefinition.addOrReplaceChild(createSegmentName(i), CubeListBuilder.create().texOffs(BODY_TEXS[i][0], BODY_TEXS[i][1]).addBox((float)BODY_SIZES[i][0] * -0.5F, 0.0F, (float)BODY_SIZES[i][2] * -0.5F, (float)BODY_SIZES[i][0], (float)BODY_SIZES[i][1], (float)BODY_SIZES[i][2]), PartPose.offset(0.0F, (float)(24 - BODY_SIZES[i][1]), f));
-            if (i < 3) {
-                f += (float)(BODY_SIZES[i][2] + BODY_SIZES[i + 1][2]) * 0.5F;
-            }
-        }
+        PartDefinition mimic =
+                partdefinition.addOrReplaceChild(
+                        "mimic",
+                        CubeListBuilder.create()
+                                .texOffs(0, 9)
+                                .addBox(-1.5F, -2.0F, 0.0F, 3.0F, 3.0F, 3.0F, new CubeDeformation(0.0F)),
+                        PartPose.offset(0.0F, 21.0F, 2.5F));
 
-        return LayerDefinition.create(meshdefinition, 64, 32);
+        PartDefinition head =
+                mimic.addOrReplaceChild(
+                        "head",
+                        CubeListBuilder.create()
+                                .texOffs(12, 9)
+                                .addBox(-2.0F, -2.0F, -4.4F, 4.0F, 3.0F, 2.0F, new CubeDeformation(0.0F)),
+                        PartPose.offset(0.0F, 0.0F, -2.5F));
+
+        PartDefinition chest =
+                mimic.addOrReplaceChild(
+                        "chest",
+                        CubeListBuilder.create()
+                                .texOffs(0, 0)
+                                .addBox(-3.0F, -4.0F, -2.4F, 6.0F, 4.0F, 5.0F, new CubeDeformation(0.0F)),
+                        PartPose.offset(0.0F, 0.0F, -2.5F));
+
+        PartDefinition tail =
+                mimic.addOrReplaceChild(
+                        "tail",
+                        CubeListBuilder.create()
+                                .texOffs(0, 0)
+                                .addBox(-0.5F, 0.0F, 5.5F, 1.0F, 3.0F, 1.0F, new CubeDeformation(0.0F)),
+                        PartPose.offset(0.0F, 0.0F, -2.5F));
+
+        PartDefinition leg_1 =
+                mimic.addOrReplaceChild(
+                        "leg_1",
+                        CubeListBuilder.create()
+                                .texOffs(17, 0)
+                                .addBox(-2.0F, -1.0F, -1.0F, 2.0F, 2.0F, 2.0F, new CubeDeformation(0.0F))
+                                .texOffs(0, 15)
+                                .addBox(-3.0F, 0.0F, -1.0F, 1.0F, 4.0F, 2.0F, new CubeDeformation(0.0F)),
+                        PartPose.offset(-3.0F, -1.0F, -2.5F));
+
+        PartDefinition leg_2 =
+                mimic.addOrReplaceChild(
+                        "leg_2",
+                        CubeListBuilder.create()
+                                .texOffs(16, 14)
+                                .addBox(6.0F, -1.0F, -1.0F, 2.0F, 2.0F, 2.0F, new CubeDeformation(0.0F))
+                                .texOffs(10, 14)
+                                .addBox(8.0F, 0.0F, -1.0F, 1.0F, 4.0F, 2.0F, new CubeDeformation(0.0F)),
+                        PartPose.offset(-3.0F, -1.0F, -2.5F));
+
+        return LayerDefinition.create(meshdefinition, 32, 32);
     }
 
     public ModelPart root() {
-        return this.root;
+        return this.mimic;
     }
 
     /**
      * Sets this entity's model rotation angles
      */
     public void setupAnim(MimicEntity pEntity, float pLimbSwing, float pLimbSwingAmount, float pAgeInTicks, float pNetHeadYaw, float pHeadPitch) {
+        /*
         for(int i = 0; i < this.bodyParts.length; ++i) {
             this.bodyParts[i].yRot = Mth.cos(pAgeInTicks * 0.9F + (float)i * 0.15F * (float)Math.PI) * (float)Math.PI * 0.01F * (float)(1 + Math.abs(i - 2));
             this.bodyParts[i].x = Mth.sin(pAgeInTicks * 0.9F + (float)i * 0.15F * (float)Math.PI) * (float)Math.PI * 0.1F * (float)Math.abs(i - 2);
         }
+        */
     }
-
-    public static ModelLayerLocation MIMIC_MODEL_LAYER =
-            new ModelLayerLocation(new ResourceLocation(MODID,"mimic_model"), "root");
 }
+
 
